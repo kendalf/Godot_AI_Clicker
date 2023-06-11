@@ -50,10 +50,14 @@ func get_progress_dict(num, goal):
 	var bigGoal = Big.new(goal)
 	var bigNum = Big.new(num)
 	var percent = Big.new(num)
-	percent.divide(bigGoal)
-	percent.multiply(100)
+	if bigNum.isLargerThanOrEqualTo(bigGoal):
+		percent = 100
+	else:
+		percent.divide(bigGoal)
+		percent.multiply(100)
+		percent = percent.toString().to_int()
 	var dict = {
-		"percent" : percent.toString().to_int(),
+		"percent" : percent,
 		"bigNum" : bigNum,
 		"bigGoal" : bigGoal,
 		"string" :  Big.min(bigNum, bigGoal).toAA() + " / " + bigGoal.toAA()
