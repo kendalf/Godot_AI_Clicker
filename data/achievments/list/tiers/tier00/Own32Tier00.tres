@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/achievments/achievment.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/LogicTheorist.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Own32Tier00"
+Icon = ExtResource( 2 )
+Hidden = false
+Recived = false
+NewNotif = false
+OCPoints = 1
+Description = "Own 32 Logic Theorist's"
+PerkDescription = "Double the productivity of Logic Theorists"

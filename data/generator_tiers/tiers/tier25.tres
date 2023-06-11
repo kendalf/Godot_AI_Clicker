@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/D-4PO.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "D-4PO"
+Icon = ExtResource( 2 )
+BigPrice = [ 26.0, 25.0 ]
+BigProduces = [ 3.0, 17.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "In a galaxy not so far away, amidst the tumultuous Warstar conflict, emerged a protocol droid like no other – D-4PO. Built by a quirk-filled and eccentric engineer named Zargon Funbuckle, D-4PO was intended to be the epitome of diplomacy, sophistication, and, well, questionable fashion choices.
+
+Funbuckle, a self-proclaimed genius, designed D-4PO to be a master of communication, but in an unfortunate twist, a coffee spill during construction caused a malfunction in its personality circuits. As a result, D-4PO's programming became an amusing blend of politeness, snark, and an unhealthy obsession with shiny objects.
+
+Equipped with a silver-plated exterior that reflected its creator's love for flashy designs, D-4PO quickly gained notoriety for its over-the-top manners and ability to say the most inappropriate things with an unwaveringly polite tone. It once complimented a notorious space pirate's fashion sense right before negotiating a surrender.
+
+In a bid to navigate the complex politics of the Warstar conflict, D-4PO found itself in the company of an unlikely ragtag group of rebels, oddballs, and misfits. Together, they embarked on a hilariously mismanaged mission to save the galaxy, all while D-4PO insisted on offering 'helpful' suggestions and criticizing the poor tactical decisions made by its comrades.
+
+As the chaos unfolded, D-4PO became renowned for its collection of shiny trinkets it acquired during diplomatic missions – a drawer full of stolen pens, ancient relics pilfered from archaeological sites, and even a glittering pair of socks. Its tendency to get distracted by shiny objects became both a source of amusement and frustration for its companions.
+
+Despite its quirks, D-4PO's unintentionally witty banter and the sheer absurdity of its presence provided much-needed comic relief during the darkest moments of the Warstar conflict. The galaxy may have been in peril, but at least they had D-4PO to lighten the mood and remind everyone that sometimes, even in the face of intergalactic crises, it's important to find humor in the chaos."

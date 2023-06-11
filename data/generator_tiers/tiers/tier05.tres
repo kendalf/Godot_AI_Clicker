@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/DeepBlue.png" type="Texture" id=1]
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "Deep Blue"
+Icon = ExtResource( 1 )
+BigPrice = [ 6.0, 5.0 ]
+BigProduces = [ 3.0, 3.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "Deep Blue was a chess-playing computer developed by IBM. It gained worldwide recognition for its historic match against world chess champion Garry Kasparov in 1997. Deep Blue marked a significant milestone in the advancement of artificial intelligence and demonstrated the capabilities of machine intelligence in complex strategic games.
+
+Deep Blue's development started in the late 1980s as a project called \"Deep Thought.\" Over time, it evolved into a highly specialized chess-playing system that employed a combination of powerful hardware and sophisticated algorithms.
+
+The hardware used in Deep Blue consisted of custom-designed chess hardware and a parallel processing architecture. It was capable of evaluating millions of chess positions per second, enabling it to perform extensive search and analysis.
+
+The software component of Deep Blue employed a combination of traditional chess programming techniques and advanced search algorithms. It used a tree-searching approach known as alpha-beta pruning, which allowed it to explore different moves and anticipate future outcomes. Deep Blue also utilized an extensive opening book of pre-analyzed chess positions to guide its early-game decisions.
+
+In 1996, Deep Blue played a famous six-game match against Garry Kasparov, which Kasparov won with a score of 4-2. However, the rematch in 1997 captured global attention. Deep Blue had undergone further improvements, including enhanced search algorithms and more powerful hardware.
+
+In the rematch, Deep Blue defeated Kasparov with a score of 3.5-2.5, becoming the first computer to defeat a reigning world chess champion in a classical match. The victory was a significant milestone in AI history and represented a remarkable achievement in computational power and strategic decision-making.
+
+Deep Blue's success demonstrated the potential of AI in highly complex tasks that require strategic thinking, pattern recognition, and decision-making under time pressure. While its capabilities were specific to chess, Deep Blue paved the way for advancements in other areas of AI, including game-playing algorithms, search techniques, and parallel computing.
+
+The legacy of Deep Blue continues to inspire AI researchers and has contributed to the development of more advanced chess-playing programs and other applications in the field of artificial intelligence."

@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://exo2_small.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Marquee.gd" type="Script" id=2]
+
+[node name="Label" type="Label"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+custom_fonts/font = ExtResource( 1 )
+text = "trewtsg sdfgsdf gsdfg  sdfgdsf gdsfgsd fgdfg d"
+clip_text = true
+script = ExtResource( 2 )
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="ScrollTimer" type="Timer" parent="."]
+wait_time = 0.1
+
+[connection signal="timeout" from="StartTimer" to="." method="_on_StartTimer_timeout"]
+[connection signal="timeout" from="ScrollTimer" to="." method="_on_ScrollTimer_timeout"]

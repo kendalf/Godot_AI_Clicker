@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/overClock/OverClockItem.gd" type="Script" id=1]
+[ext_resource path="res://images/1x/clock.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Offline Time"
+Icon = ExtResource( 2 )
+Description = "Increase the amount of time your computers will keep working while you're away by 15 minutes"
+v = {
+"AppliedPoints": 0,
+"Hidden": false,
+"Price": 1,
+"Unit": " Minutes",
+"ValueToAdd": 15.0,
+"VarToSet": "offlineTimeLimit"
+}
+SciFiComp = ""

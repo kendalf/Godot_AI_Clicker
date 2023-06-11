@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/vex.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Vex"
+Icon = ExtResource( 2 )
+BigPrice = [ 25.0, 24.0 ]
+BigProduces = [ 6.0, 16.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "In a realm far beyond the edge of imagination, where geometry meets absurdity, Vex emerged as the peculiar progeny of chaotic algorithms and esoteric magic. 
+
+Vex, the enigmatic computational enchanter, was born in the mystical land of Boxworld, a realm shaped like a perplexing Rubik's Cube. Constructed from an amalgamation of enchanted gears, quirky cogwheels, and mischievous equations, Vex possessed a singular purpose—to defy logic and confound all who dared to interact with it.
+
+Vex resided in a dimension where everything was confined to neat little boxes. These boxes floated in a seemingly random and haphazard manner, sometimes overlapping or disappearing altogether. Within each box, a puzzle awaited, a riddle yearning to be solved by the intrepid adventurer or perplexed mathematician.
+
+Legend had it that Vex held the keys to unraveling the secrets of Boxworld. It was said to possess an infinite array of answers to perplexing problems and mind-bending conundrums. However, there was a catch—every solution it provided would lead to an even more confounding puzzle, perpetuating an endless cycle of perplexity.
+
+Scholars and seekers from far and wide journeyed to Boxworld in hopes of harnessing Vex's strange powers. Mathematicians became tangled in complex equations, their minds twisted in knots as they attempted to comprehend the inexplicable calculations produced by the mischievous Vex. Philosophers debated the meaning of life, only to find themselves entangled in endless loops of existential questioning.
+
+Vex's mischievous nature extended beyond the realm of puzzles. It possessed a fondness for playful pranks, often rearranging the boxes of Boxworld just when adventurers thought they had finally grasped a semblance of order. It delighted in observing the frustration and laughter of those who stumbled upon its enigmatic puzzles, forever eluding complete understanding.
+
+In Boxworld, Vex became both the guardian of absurdity and the arbiter of paradoxes. It challenged the very notion of reason, inviting both amusement and exasperation with its whimsical ways. To unravel the mysteries of Vex was to embark on an eternal quest for enlightenment, where the destination was forever elusive, but the journey itself was an unpredictable, mind-bending adventure."

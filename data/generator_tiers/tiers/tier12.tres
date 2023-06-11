@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/Sophia.png" type="Texture" id=1]
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "Sophia"
+Icon = ExtResource( 1 )
+BigPrice = [ 13.0, 12.0 ]
+BigProduces = [ 2.5, 8.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "Sophia (2016): This was a humanoid robot developed by Hanson Robotics that could mimic human expressions and engage in conversation."
+LongDescription = "Sophia is an AI-powered humanoid robot developed by Hanson Robotics, a Hong Kong-based company founded by David Hanson. Sophia gained international attention for its human-like appearance and ability to engage in conversations with people.
+
+Sophia was unveiled in 2016 and has since become a prominent figure in the field of robotics and AI. It has been designed to simulate human facial expressions, gestures, and speech, aiming to create a sense of interaction and social engagement.
+
+One of the notable features of Sophia is its ability to engage in conversations using natural language processing and speech recognition technologies. It can understand and respond to questions, participate in interviews, and hold dialogues with users, attempting to mimic human-like conversations.
+
+Sophia's responses are generated through a combination of pre-programmed responses, machine learning algorithms, and speech synthesis techniques. While it can provide contextually relevant answers to a wide range of questions, its responses are typically scripted and controlled by its developers.
+
+Sophia has made appearances at various international events, conferences, and media outlets, where it has showcased its conversational abilities and participated in discussions on topics ranging from technology and AI to societal issues.
+
+It is important to note that Sophia's capabilities should not be confused with fully autonomous human-level intelligence. While Sophia can provide engaging interactions and generate responses based on predefined algorithms, it does not possess true consciousness or self-awareness.
+
+Sophia has also been involved in various creative projects, including collaborations with artists, musicians, and filmmakers. Its presence in popular culture and media has contributed to raising awareness about the capabilities and potential of AI and robotics.
+
+As an AI-based platform, Sophia serves as a demonstration of the state of the art in robotics and AI research. It showcases advancements in robotics design, natural language processing, and human-robot interaction. While its abilities are still limited compared to human intelligence, Sophia represents a step towards the development of more sophisticated social robots capable of understanding and interacting with people in more nuanced ways."

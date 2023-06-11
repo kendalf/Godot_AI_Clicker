@@ -1,0 +1,34 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/AlphaGo.png" type="Texture" id=1]
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "AlphaGo"
+Icon = ExtResource( 1 )
+BigPrice = [ 8.0, 7.0 ]
+BigProduces = [ 8.0, 4.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "AlphaGo (2016): This was an AI system developed by Google's DeepMind that defeated the world champion in the game of Go."
+LongDescription = "AlphaGo is an AI program developed by DeepMind, a subsidiary of Alphabet Inc. (Google's parent company). It gained global attention in 2016 when it defeated the world champion Go player, Lee Sedol, in a five-game match.
+
+Go is an ancient board game known for its complexity, strategic depth, and vast number of possible moves. Unlike chess, where brute force computation is effective, Go poses a significant challenge for AI due to the immense branching factor and the difficulty of evaluating positions.
+
+AlphaGo utilized a combination of advanced AI techniques, including deep neural networks and Monte Carlo tree search, to master the game of Go. It underwent a two-step learning process: supervised learning and reinforcement learning.
+
+In supervised learning, AlphaGo was trained on a large dataset of expert human games to mimic their strategies. Deep neural networks were employed to analyze board positions and determine the best moves.
+
+Reinforcement learning was the key to AlphaGo's breakthrough performance. It played millions of games against different versions of itself, continually improving its gameplay through trial and error. This approach allowed AlphaGo to learn from its own experience and discover innovative strategies that had not been seen before in human play.
+
+In March 2016, AlphaGo challenged Lee Sedol, a highly regarded Go player and world champion, in a five-game match. AlphaGo won four out of the five games, demonstrating its exceptional strength and strategic understanding. The victory of a computer program over a top human player in a game as complex as Go marked a significant milestone in AI.
+
+The success of AlphaGo had a profound impact on the field of AI and game-playing algorithms. It showcased the power of combining deep learning with reinforcement learning to tackle complex problems. AlphaGo's techniques have since influenced advancements in other areas, including robotics, recommendation systems, and natural language processing.
+
+DeepMind has continued to develop and refine the AlphaGo system. AlphaGo Zero, introduced in 2017, surpassed its predecessor by training solely through self-play without any human data. AlphaZero, introduced in 2018, extended the approach to other games like chess and shogi, achieving remarkable results.
+
+The accomplishments of AlphaGo have not only pushed the boundaries of AI but have also brought attention to the potential and capabilities of machine intelligence in complex problem-solving domains."

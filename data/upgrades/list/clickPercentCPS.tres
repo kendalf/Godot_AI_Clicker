@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/upgrades/upgrade.gd" type="Script" id=1]
+[ext_resource path="res://images/expansion x1/pointer.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "clickPercentCPS"
+InGameName = "Tap Power Up"
+Icon = ExtResource( 2 )
+BigPrice = [ 1.0, 3.0 ]
+recurring = true
+hidden = true
+PriceMultiplier = 100.0
+Owned = 0
+Description = "The amount of computes per click  is 1% of your CPS"

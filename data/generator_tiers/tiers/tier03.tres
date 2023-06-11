@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/shakey.png" type="Texture" id=1]
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "Shakey"
+Icon = ExtResource( 1 )
+BigPrice = [ 4.0, 3.0 ]
+BigProduces = [ 1.25, 2.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "MYCIN (1976): This was an early expert system that could diagnose bacterial infections and recommend treatments."
+LongDescription = "Shakey the Robot, developed at the Stanford Research Institute (SRI) in the late 1960s, was one of the first mobile robots capable of autonomous navigation and performing tasks in real-world environments. It was a groundbreaking project that contributed significantly to the field of robotics and AI.
+
+Shakey was a wheeled robot equipped with a TV camera, sensors, and a computer system. It operated in a block world, a simplified environment consisting of objects arranged in a grid-like structure. Shakey's primary objective was to navigate through the environment, perceive its surroundings, and manipulate objects to complete tasks.
+
+One of the notable features of Shakey was its ability to reason about its actions and environment. It used a combination of geometric and logical reasoning to plan its actions and make decisions. Shakey employed a hierarchical control system that allowed it to coordinate perception, planning, and execution of tasks.
+
+To navigate autonomously, Shakey used a combination of visual perception and sensor inputs to build a map of the environment. It could detect obstacles, determine their location and shape, and plan paths to reach specific goals.
+
+Shakey's tasks included pushing objects, stacking blocks, and finding its way to specified locations. While its movements were slow and deliberative, Shakey demonstrated the capability to operate in a dynamic and unstructured environment.
+
+The development of Shakey played a crucial role in advancing robotics and AI research. It highlighted the challenges involved in perception, planning, and control for mobile robots. Shakey's capabilities and limitations inspired subsequent research and influenced the development of more advanced robotic systems.
+
+Shakey's legacy can be seen in the continued progress of autonomous mobile robots and the application of AI techniques in robotics, such as simultaneous localization and mapping (SLAM), path planning algorithms, and perception systems. Its pioneering work paved the way for the development of modern robotic systems that can operate in complex and dynamic real-world environments."

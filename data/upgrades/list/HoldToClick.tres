@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/upgrades/upgrade.gd" type="Script" id=1]
+[ext_resource path="res://images/1x/arrowDown.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "HoldToClick"
+InGameName = "Hold To Tap"
+Icon = ExtResource( 2 )
+BigPrice = [ 1.0, 2.0 ]
+recurring = false
+hidden = true
+PriceMultiplier = 2.01
+Owned = 0
+Description = "Hold the compute button down"

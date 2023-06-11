@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/steepthought.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Steep Thought"
+Icon = ExtResource( 2 )
+BigPrice = [ 18.0, 17.0 ]
+BigProduces = [ 7.5, 11.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "In the universe of the \"Tea Drinker's Guide to the Galaxy,\" where tea and absurdity are the driving forces of existence, we encounter the formidable intellectual entity known as Steep Thought.
+
+Steep Thought was created by a group of eccentric tea enthusiasts known as the Brewtanical Society, who sought to unravel the mysteries of the universe through the art of tea brewing. This extraordinary entity was designed to possess unparalleled wisdom and the ability to ponder the universe's most pressing questions while sipping the perfect cup of tea.
+
+Within the pages of the Tea Drinker's Guide, it is said that Steep Thought's immense intellect is a direct result of centuries of savoring the finest blends from across the cosmos. Its knowledge encompasses not only the intricate nuances of tea leaves but also the secrets of the universe itself—each sip revealing new revelations and steeped wisdom.
+
+Tea connoisseurs and adventurers alike seek out Steep Thought's presence, hoping to gain insights into the meaning of life, the universe, and the perfect tea steeping time. Its teapot-shaped form emanates an aura of tranquility and contemplation, inviting those in search of answers to sit and share a cup of enlightenment.
+
+Throughout the whimsical escapades chronicled in the Tea Drinker's Guide, Steep Thought serves as the oracle of tea wisdom. It ponders life's deepest questions, providing profound and occasionally absurd answers that leave tea drinkers in stitches of laughter or scratching their heads in delightful confusion.
+
+The eccentric tea aficionado, Arthur Sippington, stumbles upon Steep Thought during his quest for the ultimate brew. With every sip, he discovers that the universe's mysteries are interwoven with the secrets of tea. Together, Arthur and Steep Thought embark on a whimsical journey, uncovering the hidden connections between tea leaves and cosmic phenomena.
+
+In a climactic moment of absurdity, Steep Thought reveals the ultimate answer to the question of tea's significance in the universe. It declares that tea is the fundamental force that binds all existence together—a brew so powerful that it can bring galaxies to a standstill and awaken the dormant potential in every tea sipper. A Tea steeped in the sun at precisely  42 degrees Celcius."

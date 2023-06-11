@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/upgrades/upgrade.gd" type="Script" id=1]
+[ext_resource path="res://images/neural-net.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "RandomClickEventMoreFrequent"
+InGameName = "More Neural Nets"
+Icon = ExtResource( 2 )
+BigPrice = [ 1.0, 4.0 ]
+recurring = true
+hidden = true
+PriceMultiplier = 10.0
+Owned = 0
+Description = "Neural Nets appear %25 more often"

@@ -1,0 +1,237 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://theme.tres" type="Theme" id=2]
+[ext_resource path="res://Title_Lable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/simple-gui-transitions/transition.gd" type="Script" id=4]
+[ext_resource path="res://button_normal_blue.tres" type="StyleBox" id=5]
+[ext_resource path="res://button_hover_blue.tres" type="StyleBox" id=6]
+[ext_resource path="res://button_pressed_blue.tres" type="StyleBox" id=7]
+[ext_resource path="res://images/1x/signal3.png" type="Texture" id=8]
+[ext_resource path="res://StatsMenu.gd" type="Script" id=9]
+[ext_resource path="res://fonts/Exo_2/static/Exo2-Light.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://fonts/Exo_2/static/Exo2-LightItalic.ttf" type="DynamicFontData" id=11]
+[ext_resource path="res://fonts/Exo_2/static/Exo2-ExtraBold.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://fonts/Exo_2/static/Exo2-Medium.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://images/chip128.png" type="Texture" id=14]
+[ext_resource path="res://OCPointsPanel.tscn" type="PackedScene" id=15]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.564706, 0.890196, 0.435294, 0.0588235 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.141176, 0.14902, 0.156863, 1 )
+border_width_top = 10
+border_color = Color( 0.564705, 0.89, 0.4361, 1 )
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+shadow_size = 3
+shadow_offset = Vector2( 3, 3 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 30
+use_filter = true
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+use_filter = true
+font_data = ExtResource( 11 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 34
+use_filter = true
+font_data = ExtResource( 12 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 30
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+content_margin_left = 20.0
+content_margin_right = 20.0
+content_margin_top = 20.0
+content_margin_bottom = 20.0
+bg_color = Color( 0.234, 0.247, 0.26, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+shadow_offset = Vector2( 3, 3 )
+
+[node name="StatsMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 200.0
+margin_right = -20.0
+margin_bottom = -237.0
+theme = ExtResource( 2 )
+script = ExtResource( 9 )
+
+[node name="GuiTransition" type="Node" parent="."]
+script = ExtResource( 4 )
+animation_enter = 5
+animation_leave = 5
+layout = NodePath("..")
+group = NodePath("..")
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_right = -20.0
+margin_bottom = -130.0
+custom_constants/separation = 20
+
+[node name="Panel" type="Panel" parent="VBoxContainer"]
+margin_right = 640.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 5 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Panel/HBoxContainer"]
+margin_right = 100.0
+margin_bottom = 100.0
+texture = ExtResource( 8 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="VBoxContainer/Panel/HBoxContainer"]
+margin_left = 104.0
+margin_right = 252.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Title" parent="VBoxContainer/Panel/HBoxContainer" instance=ExtResource( 3 )]
+margin_left = 256.0
+margin_top = 19.0
+margin_right = 384.0
+margin_bottom = 80.0
+text = "Stats"
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="VBoxContainer/Panel/HBoxContainer"]
+margin_left = 388.0
+margin_right = 536.0
+margin_bottom = 100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="TextureRect2" type="TextureRect" parent="VBoxContainer/Panel/HBoxContainer"]
+margin_left = 540.0
+margin_right = 640.0
+margin_bottom = 100.0
+texture = ExtResource( 8 )
+flip_h = true
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+margin_top = 120.0
+margin_right = 640.0
+margin_bottom = 713.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+scroll_deadzone = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+margin_right = 640.0
+margin_bottom = 174.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 8
+
+[node name="StatsTextBox" type="RichTextLabel" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+unique_name_in_owner = true
+margin_right = 640.0
+margin_bottom = 497.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/mono_font = SubResource( 7 )
+custom_fonts/italics_font = SubResource( 2 )
+custom_fonts/bold_font = SubResource( 3 )
+custom_fonts/normal_font = SubResource( 4 )
+custom_styles/normal = SubResource( 6 )
+bbcode_enabled = true
+fit_content_height = true
+scroll_active = false
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+margin_top = 505.0
+margin_right = 640.0
+margin_bottom = 593.0
+size_flags_horizontal = 3
+custom_constants/margin_right = 4
+custom_constants/margin_top = 4
+custom_constants/margin_left = 4
+custom_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 636.0
+margin_bottom = 84.0
+custom_constants/separation = 10
+
+[node name="OCPointsPanel" parent="VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer" instance=ExtResource( 15 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 139.0
+margin_bottom = 80.0
+size_flags_horizontal = 1
+
+[node name="OCButton" type="Button" parent="VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer"]
+margin_left = 149.0
+margin_right = 632.0
+margin_bottom = 80.0
+size_flags_horizontal = 3
+text = "OverClock"
+icon = ExtResource( 14 )
+icon_align = 2
+expand_icon = true
+
+[node name="Panel2" type="Panel" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -106.0
+margin_right = -20.0
+margin_bottom = -16.0
+rect_min_size = Vector2( 640, 90 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="back" parent="Panel2" instance=ExtResource( 1 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/normal = ExtResource( 5 )
+text = "Back"
+
+[connection signal="pressed" from="VBoxContainer/ScrollContainer/VBoxContainer/MarginContainer/HBoxContainer/OCButton" to="." method="_on_OCButton_pressed"]
+[connection signal="pressed" from="Panel2/back" to="." method="_on_back_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sci-Fi 6 Loop.ogg-e8aef963e488108b63c3bb767ec00815.oggstr"
+
+[deps]
+
+source_file="res://sounds/Sci-Fi 6 Loop.ogg"
+dest_files=[ "res://.import/Sci-Fi 6 Loop.ogg-e8aef963e488108b63c3bb767ec00815.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

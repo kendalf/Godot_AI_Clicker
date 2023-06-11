@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/GeneralProblemSolver.png" type="Texture" id=1]
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "General Problem Solver"
+Icon = ExtResource( 1 )
+BigPrice = [ 5.0, 2.0 ]
+BigProduces = [ 5.0, 0.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "The General Problem Solver (GPS) was an influential AI program developed by Allen Newell and Herbert A. Simon at the RAND Corporation in 1957. It aimed to solve a wide range of problems by simulating human problem-solving processes.
+
+GPS was designed to reason and search for solutions in a general problem-solving framework. It used means-ends analysis, a problem-solving strategy that involved breaking down a problem into subgoals and identifying actions that would reduce the difference between the current state and the goal state.
+
+The program represented problems and solutions as symbolic states and operations. It employed heuristic rules and problem-specific information to guide its search through the space of possible actions and states. GPS would evaluate different paths and choose the most promising ones based on the available knowledge and the desired goal.
+
+While GPS was a significant achievement at the time, it had limitations. Its problem-solving capabilities were largely limited to well-defined, formal domains. It lacked the ability to learn from experience or adapt to new situations, and its performance was highly dependent on the availability of specific problem-solving rules and information.
+
+However, GPS laid the foundation for subsequent research in problem-solving, planning, and knowledge representation in AI. It demonstrated the potential of using symbolic manipulation and rule-based reasoning to tackle complex problems, leading to advancements in expert systems and other problem-solving approaches.
+
+GPS also influenced the development of cognitive architectures, which aimed to model human cognition and problem-solving processes. Its influence can be seen in subsequent systems like SOAR (State, Operator, and Result) and ACT-R (Adaptive Control of Thought-Rational).
+
+Overall, the General Problem Solver was a significant step in AI research, showcasing the power of symbolic reasoning and problem-solving strategies in the early days of the field."

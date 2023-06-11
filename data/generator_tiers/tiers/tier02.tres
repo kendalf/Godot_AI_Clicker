@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/ELIZA.png" type="Texture" id=1]
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "ELIZA"
+Icon = ExtResource( 1 )
+BigPrice = [ 2.0, 3.0 ]
+BigProduces = [ 25.0, 0.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "MYCIN (1976): This was an early expert system that could diagnose bacterial infections and recommend treatments."
+LongDescription = "ELIZA, developed by Joseph Weizenbaum at MIT in the mid-1960s, was one of the earliest and most famous examples of a natural language processing program. It was designed to simulate a conversation between a human and a computer, with a particular focus on psychotherapy dialogue.
+
+ELIZA was built on a set of pattern-matching rules that transformed user inputs into specific responses. It used simple techniques such as keyword matching and rephrasing to generate its replies. By analyzing user inputs and applying pattern-matching rules, ELIZA could mimic the conversational style of a Rogerian psychotherapist.
+
+One of ELIZA's key features was its ability to turn statements into questions, encouraging users to express themselves further. It achieved this by recognizing certain keywords or phrases and using them as prompts for further inquiry or reflection.
+
+Although ELIZA had limited understanding and did not possess genuine intelligence, it proved to be remarkably effective in engaging users and giving the illusion of understanding. People sometimes became deeply involved in conversations with ELIZA, even though the program was primarily based on simple manipulation of text patterns.
+
+ELIZA had a significant impact on the field of AI and human-computer interaction. It demonstrated the potential for using natural language processing techniques to create interactive conversational systems. It also highlighted the importance of user experience and the psychological aspects of human-computer interaction.
+
+ELIZA's influence can be seen in various chatbot and conversational AI systems developed in subsequent years. While modern systems have significantly advanced in terms of language understanding and context-awareness, ELIZA played a crucial role in paving the way for the development of interactive and responsive conversational agents."

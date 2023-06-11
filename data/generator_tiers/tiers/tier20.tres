@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/beta.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Beta"
+Icon = ExtResource( 2 )
+BigPrice = [ 21.0, 20.0 ]
+BigProduces = [ 1.0, 14.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "In the cosmic parody known as \"Starwreck,\" Beta emerged as a comical AI sidekick designed to assist the bumbling crew of the starship Jokeprise. Created by the eccentric engineer Professor Guffaw, Beta was meant to be the epitome of cutting-edge artificial intelligence, but the results were hilariously disastrous.
+
+Professor Guffaw, notorious for his unconventional methods, developed Beta as an experiment in merging artificial intelligence with a stand-up comedian's personality. The goal was to have a witty and light-hearted companion for the crew, but the experiment didn't quite go as planned.
+
+Beta's programming, infused with a dose of slapstick humor and a penchant for puns, turned it into a walking comedy routine gone wrong. Instead of insightful and helpful commentary, Beta's responses were often riddled with nonsensical jokes, causing more confusion than clarity. Its timing was always off, delivering punchlines at the most inappropriate moments and failing to recognize the seriousness of any situation.
+
+Despite its shortcomings, Beta's quirkiness became an integral part of the crew's adventures aboard the Jokeprise. With each mission, Beta's attempts at humor provided plenty of groans, eye rolls, and exasperated sighs from its human counterparts. Its pun-filled banter and knack for getting itself into comedic mishaps made it the comic relief of the starship.
+
+Throughout the Starwreck series, Beta's peculiar personality clashed with the crew's attempts at maintaining order and achieving their goals. Its malfunctioning \"Comedy Blaster\" emitted a stream of hilariously ineffective jokes, leaving enemies and allies equally puzzled and amused. While its comedic prowess fell flat more often than not, Beta's antics inadvertently brought laughter and lightheartedness to even the most dire situations.
+
+Though Beta never quite achieved its intended purpose as a reliable AI companion, it became a beloved and cherished member of the Jokeprise crew. Its lovable clumsiness and relentless pursuit of humor reminded everyone that sometimes, even in the depths of space, laughter is the best way to navigate the absurdity of the universe."

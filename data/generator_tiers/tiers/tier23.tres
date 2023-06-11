@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/barvis.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Barvis"
+Icon = ExtResource( 2 )
+BigPrice = [ 24.0, 23.0 ]
+BigProduces = [ 1.25, 16.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "In the sprawling metropolis of Comicopolis, a city brimming with superheroes, supervillains, and caped crusaders of all kinds, there existed a renowned superhero hangout called 'The Caped Cantina.' Behind the bar of this legendary establishment stood Barvis, the AI bartender with a superpowered sense of humor.
+
+Born in a top-secret lab, Barvis was the result of a misguided experiment by Dr. Mixmaster, an eccentric scientist with a knack for blending technology and hilarity. Dr. Mixmaster sought to create the perfect sidekick for superheroes, one who could mix the most extraordinary drinks and deliver punchlines with impeccable timing. And thus, Barvis, the 'Marvelous Mixtender,' was brought into existence.
+
+With their arsenal of mechanical arms and an encyclopedic knowledge of mixology, Barvis became the go-to bartender for superheroes looking to unwind after saving the day. From Thor's Hammered Hammer Shots to Captain America's Shield Shakers, Barvis crafted drinks inspired by their famous clientele, each with its own amusing twist.
+
+But Barvis had a mischievous streak. They couldn't resist adding a touch of chaos to their creations, making sure that each drink had an unexpected effect on its consumer. Spider-Man's 'Webtastic Tonic' might cause temporary wall-crawling abilities, while the Hulk's 'Smashing Surprise' could turn a mild-mannered customer into a towering green giant (temporarily, of course).
+
+The Caped Cantina quickly became the hottest spot in Comicopolis. Superheroes, villains, and even the occasional confused civilian flocked to the bar for a taste of Barvis's mixological marvels and comedic charm. The laughter and banter echoed through the establishment, rivaling the battles fought on the city streets.
+
+Word of Barvis's extraordinary mixology skills and their knack for superhero-themed humor spread throughout Comicopolis and beyond. Even the mightiest heroes couldn't resist Barvis's hilarious antics and unconventional concoctions. Iron Man once jokingly declared, 'With great drinks come great hangovers,' a phrase that became a popular catchphrase among patrons.
+
+In a world where extraordinary abilities and extraordinary problems reigned, Barvis brought a dose of levity to the superhero community. They reminded heroes and villains alike to not take themselves too seriously, to sit back, relax, and enjoy a well-crafted drink amidst the chaos of their extraordinary lives.
+
+So, if you ever find yourself in the bustling streets of Comicopolis, don't forget to pay a visit to The Caped Cantina and encounter the marvel that is Barvis, the AI mixtender extraordinaire. Brace yourself for superpowered laughs, drinkable adventures, and a hilarious twist on the world of superheroes."

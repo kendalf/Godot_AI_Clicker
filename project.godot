@@ -1,0 +1,287 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Resource",
+"class": "Achievement_Manager",
+"language": "GDScript",
+"path": "res://Achievement_Manager.gd"
+}, {
+"base": "Resource",
+"class": "Achievements_Res_Array",
+"language": "GDScript",
+"path": "res://data/achievments/achievement_res_array.gd"
+}, {
+"base": "Resource",
+"class": "Achievment",
+"language": "GDScript",
+"path": "res://data/achievments/achievment.gd"
+}, {
+"base": "Resource",
+"class": "Achievment_Res",
+"language": "GDScript",
+"path": "res://Achievement_Res.gd"
+}, {
+"base": "Reference",
+"class": "Big",
+"language": "GDScript",
+"path": "res://GodotBigNumberClass-master/Big.gd"
+}, {
+"base": "Reference",
+"class": "CellEditor",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/typed_cells/cell_editor.gd"
+}, {
+"base": "CellEditor",
+"class": "CellEditorArray",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/typed_cells/cell_editor_array.gd"
+}, {
+"base": "ColorRect",
+"class": "ColorTile",
+"language": "GDScript",
+"path": "res://addons/color-palette/ColorTile.gd"
+}, {
+"base": "Container",
+"class": "FlexGridContainer",
+"language": "GDScript",
+"path": "res://addons/color-palette/utilities/FlexGridContainer.gd"
+}, {
+"base": "Resource",
+"class": "GameState",
+"language": "GDScript",
+"path": "res://GameState.gd"
+}, {
+"base": "Resource",
+"class": "Generator_Tier",
+"language": "GDScript",
+"path": "res://data/generator_tiers/generator_tier.gd"
+}, {
+"base": "Resource",
+"class": "Generators_Res_Array",
+"language": "GDScript",
+"path": "res://data/generator_tiers/generator_tiers.gd"
+}, {
+"base": "Node",
+"class": "GuiTransition",
+"language": "GDScript",
+"path": "res://addons/simple-gui-transitions/transition.gd"
+}, {
+"base": "Resource",
+"class": "OverClock_Item",
+"language": "GDScript",
+"path": "res://data/overClock/OverClockItem.gd"
+}, {
+"base": "Resource",
+"class": "OverClock_Res_Array",
+"language": "GDScript",
+"path": "res://data/overClock/OverClock_Res_Array.gd"
+}, {
+"base": "Reference",
+"class": "Palette",
+"language": "GDScript",
+"path": "res://addons/color-palette/Palette.gd"
+}, {
+"base": "Reference",
+"class": "PaletteImporter",
+"language": "GDScript",
+"path": "res://addons/color-palette/PaletteImporter.gd"
+}, {
+"base": "Node",
+"class": "Property_Hook",
+"language": "GDScript",
+"path": "res://Property_Hook.gd"
+}, {
+"base": "Resource",
+"class": "SaveGame",
+"language": "GDScript",
+"path": "res://SaveGame.gd"
+}, {
+"base": "GridContainer",
+"class": "SettingsGrid",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/settings_grid.gd"
+}, {
+"base": "Control",
+"class": "SheetsDockEditor",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/typed_editors/dock_base.gd"
+}, {
+"base": "Reference",
+"class": "SpreadsheetEditFormat",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/formats_edit/edit_base.gd"
+}, {
+"base": "SpreadsheetEditFormatTres",
+"class": "SpreadsheetEditFormatCsv",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/formats_edit/edit_csv.gd"
+}, {
+"base": "SpreadsheetEditFormat",
+"class": "SpreadsheetEditFormatTres",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/formats_edit/edit_tres.gd"
+}, {
+"base": "Reference",
+"class": "SpreadsheetExportFormatCsv",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/formats_export/export_csv.gd"
+}, {
+"base": "Resource",
+"class": "SpreadsheetImport",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/spreadsheet_import.gd"
+}, {
+"base": "Reference",
+"class": "SpreadsheetImportFormatCsv",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/import_export/formats_import/import_csv.gd"
+}, {
+"base": "Reference",
+"class": "TextEditingUtils",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/text_editing_utils.gd"
+}, {
+"base": "Button",
+"class": "ThemeIconButton",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/editor_icon_button.gd"
+}, {
+"base": "Control",
+"class": "ThemeStylebox",
+"language": "GDScript",
+"path": "res://addons/resources_speadsheet_view/editor_stylebox_overrider.gd"
+}, {
+"base": "Resource",
+"class": "Upgrade",
+"language": "GDScript",
+"path": "res://data/upgrades/upgrade.gd"
+}, {
+"base": "Resource",
+"class": "Upgrade_Res",
+"language": "GDScript",
+"path": "res://Upgrade_Res.gd"
+}, {
+"base": "Resource",
+"class": "Upgrades",
+"language": "GDScript",
+"path": "res://data/upgrades/upgrades.gd"
+} ]
+_global_script_class_icons={
+"Achievement_Manager": "",
+"Achievements_Res_Array": "",
+"Achievment": "",
+"Achievment_Res": "",
+"Big": "",
+"CellEditor": "",
+"CellEditorArray": "",
+"ColorTile": "",
+"FlexGridContainer": "res://addons/color-palette/utilities/FlexGridContainerIcon.png",
+"GameState": "",
+"Generator_Tier": "",
+"Generators_Res_Array": "",
+"GuiTransition": "res://addons/simple-gui-transitions/icon.png",
+"OverClock_Item": "",
+"OverClock_Res_Array": "",
+"Palette": "",
+"PaletteImporter": "",
+"Property_Hook": "",
+"SaveGame": "",
+"SettingsGrid": "",
+"SheetsDockEditor": "",
+"SpreadsheetEditFormat": "",
+"SpreadsheetEditFormatCsv": "",
+"SpreadsheetEditFormatTres": "",
+"SpreadsheetExportFormatCsv": "",
+"SpreadsheetImport": "",
+"SpreadsheetImportFormatCsv": "",
+"TextEditingUtils": "",
+"ThemeIconButton": "",
+"ThemeStylebox": "",
+"Upgrade": "",
+"Upgrade_Res": "",
+"Upgrades": ""
+}
+
+[addons]
+
+resources_spreadsheet_view/color_rows=true
+resources_spreadsheet_view/color_arrays=true
+resources_spreadsheet_view/array_min_width=128.0
+resources_spreadsheet_view/clip_headers=false
+resources_spreadsheet_view/dupe_arrays=true
+resources_spreadsheet_view/context_menu_on_leftclick=false
+
+[application]
+
+config/name="AIClicker"
+run/main_scene="res://Perceptrons.tscn"
+config/icon="res://images/perceptron_logo.png"
+config/quit_on_go_back=false
+
+[autoload]
+
+Globals="*res://globals.gd"
+GuiTransitions="*res://addons/simple-gui-transitions/singleton.gd"
+Constants="*res://Constants.gd"
+
+[display]
+
+window/size/width=720
+window/size/height=1280
+window/handheld/orientation="portrait"
+window/stretch/mode="2d"
+window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/color-palette/plugin.cfg", "res://addons/resources_speadsheet_view/plugin.cfg", "res://addons/simple-gui-transitions/plugin.cfg" )
+
+[global]
+
+sdk=false
+color=false
+quit=false
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[gui_transitions]
+
+config/default/auto_start=true
+config/default/fade_layout=true
+config/default/center_pivot=true
+config/default/duration=0.5
+config/default/delay=0.5
+config/default/transition_type="QUAD"
+config/default/ease_type="IN_OUT"
+config/default/animation_enter=0
+config/default/animation_leave=1
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[logging]
+
+file_logging/enable_file_logging=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+quality/filters/use_fxaa=true
+environment/default_environment="res://default_env.tres"

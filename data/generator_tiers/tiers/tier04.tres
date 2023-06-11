@@ -1,0 +1,33 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/MYCIN.png" type="Texture" id=1]
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "MYCIN"
+Icon = ExtResource( 1 )
+BigPrice = [ 5.0, 4.0 ]
+BigProduces = [ 6.25, 2.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "MYCIN (1976): This was an early expert system that could diagnose bacterial infections and recommend treatments."
+LongDescription = "
+MYCIN was an expert system developed in the 1970s at Stanford University by Edward Shortliffe. It was designed to assist doctors in diagnosing and recommending treatments for bacterial infections, particularly in the field of infectious diseases.
+
+MYCIN was one of the earliest and most successful applications of expert systems in the medical domain. It employed a knowledge-based approach, where a large amount of domain-specific knowledge and rules were encoded into the system.
+
+The knowledge in MYCIN consisted of rules and heuristics obtained from expert clinicians in the field of infectious diseases. These rules captured the expertise and decision-making process used by human doctors in diagnosing and treating bacterial infections.
+
+When presented with patient data, MYCIN would ask a series of questions about the symptoms, medical history, and laboratory test results. It would then apply the knowledge base, reasoning over the data to generate a set of possible diagnoses and recommend appropriate treatments.
+
+MYCIN was capable of providing explanations for its recommendations, allowing users to understand the underlying reasoning and logic. This feature was particularly important in gaining acceptance from medical professionals, as they needed to trust and comprehend the system's decision-making process.
+
+The development of MYCIN faced significant challenges, including knowledge acquisition, uncertainty management, and rule prioritization. However, it demonstrated impressive performance, often matching or surpassing the accuracy of human experts in diagnosing bacterial infections.
+
+MYCIN's success paved the way for subsequent research in medical expert systems and influenced the development of clinical decision support systems. It showcased the potential of AI technologies in assisting medical professionals in complex tasks and highlighted the importance of knowledge representation and reasoning in the medical domain.
+
+While MYCIN itself is no longer in active use, its impact on the field of medical AI continues to be felt. The lessons learned from MYCIN's development and deployment have contributed to advancements in clinical decision support, computer-aided diagnosis, and personalized medicine."

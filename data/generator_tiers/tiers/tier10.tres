@@ -1,0 +1,34 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/Cog.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Cog"
+Icon = ExtResource( 2 )
+BigPrice = [ 11.0, 10.0 ]
+BigProduces = [ 1.0, 7.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "Cog (1997): This was a humanoid robot developed at MIT that was designed to learn about the world through experience."
+LongDescription = "Cog, also known as \"Cog Project,\" was a humanoid robot developed by a team led by Rodney Brooks at the Massachusetts Institute of Technology (MIT) in 1997. It aimed to explore the interaction between physical embodiment and cognitive development in robots.
+
+The primary focus of the Cog Project was to develop a robot that could learn and interact with the world through sensory perception and motor control. Cog was designed to have a humanoid form with a head, torso, arms, and hands, enabling it to physically interact with objects and its environment.
+
+Cog incorporated various sensors, including cameras for visual perception, microphones for audio input, and tactile sensors on its hands for touch sensing. It also had a wide range of joints and actuators that allowed it to move and manipulate objects.
+
+The development of Cog involved both hardware and software components. On the hardware side, the team focused on creating a robot with the necessary physical capabilities for perception, locomotion, and dexterous manipulation. The software component included algorithms for sensory processing, motor control, and learning.
+
+One of the key aspects of Cog was its emphasis on learning from interactions with the environment. It employed machine learning techniques, such as reinforcement learning and neural networks, to acquire and improve its cognitive abilities over time. Cog learned through a process of trial and error, exploring its surroundings, and receiving feedback based on the success or failure of its actions.
+
+Cog demonstrated various capabilities, including recognizing objects, tracking moving objects, responding to human gestures and commands, and even imitating simple actions. It could learn to perform tasks through repeated practice and reinforcement, gradually improving its performance.
+
+The Cog Project aimed to study the development of intelligence in robots by integrating perception, action, and learning. It sought to explore how embodiment and interaction with the physical world could shape the cognitive abilities of an artificial agent.
+
+While Cog itself was a research prototype and did not achieve full autonomy or human-level intelligence, it made significant contributions to the field of robotics and AI. It highlighted the importance of embodied cognition and the role of physical interaction in the development of intelligent behavior.
+
+The insights gained from the Cog Project have influenced subsequent research in robotics, cognitive science, and AI, contributing to advancements in areas such as humanoid robotics, sensorimotor learning, and the study of human cognition."

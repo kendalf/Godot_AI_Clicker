@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/Cyc.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Cyc"
+Icon = ExtResource( 2 )
+BigPrice = [ 9.0, 8.0 ]
+BigProduces = [ 4.0, 5.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "Cyc (1984): This was an early expert system that aimed to capture common-sense knowledge and reasoning abilities to solve problems."
+LongDescription = "Cyc is an AI project that aims to develop a comprehensive, common-sense knowledge base and reasoning system. The project began in the mid-1980s at Microelectronics and Computer Technology Corporation (MCC), led by Douglas Lenat. The goal of Cyc is to build a machine-readable representation of general human knowledge and enable AI systems to reason and understand the world in a more human-like manner.
+
+The Cyc knowledge base contains a vast amount of information organized in a logical and structured manner. It includes common-sense facts, rules, and heuristics that capture everyday knowledge about objects, events, and relationships in the world. The knowledge base is continually updated and expanded through a combination of automated processes and human curation.
+
+Cyc employs a symbolic reasoning engine that can perform logical inferences on the knowledge base. It can answer questions, make deductions, and generate new knowledge by chaining together various pieces of information. The system uses a combination of deduction, abduction, and induction to reason about the world and draw conclusions.
+
+One of the primary motivations behind Cyc is to provide AI systems with the ability to understand context, make assumptions, and reason in a manner similar to human cognition. The project aims to capture and represent the nuances, ambiguities, and background knowledge that humans use effortlessly in their everyday reasoning.
+
+Cyc has found applications in various domains, including natural language processing, question-answering systems, and knowledge-based AI applications. It has been used to develop AI systems that can understand and interpret text, assist in complex decision-making, and provide intelligent recommendations.
+
+The development of Cyc has been a massive undertaking, requiring significant human effort and expertise. The project faces challenges such as knowledge acquisition, knowledge representation, and scalability. Nonetheless, Cyc has made notable progress in building a comprehensive knowledge base that encompasses diverse areas of human understanding.
+
+While Cyc has not achieved widespread adoption or commercial success, it has contributed to advancements in knowledge representation, reasoning, and common-sense AI. The project continues to be an active area of research and has influenced other projects and approaches that aim to capture and utilize common-sense knowledge in AI systems."

@@ -1,0 +1,748 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://theme.tres" type="Theme" id=1]
+[ext_resource path="res://Perceptrons.gd" type="Script" id=2]
+[ext_resource path="res://images/flare_7.png" type="Texture" id=3]
+[ext_resource path="res://Button.tscn" type="PackedScene" id=4]
+[ext_resource path="res://sounds/Sci-Fi 6 Loop.ogg" type="AudioStream" id=5]
+[ext_resource path="res://images/perceptron-export.png" type="Texture" id=6]
+[ext_resource path="res://images/flare_10-export.png" type="Texture" id=7]
+[ext_resource path="res://HUD.tscn" type="PackedScene" id=8]
+[ext_resource path="res://images/00036-449810239.png" type="Texture" id=9]
+[ext_resource path="res://images/expansion x1/cpu.png" type="Texture" id=10]
+[ext_resource path="res://Tiers.tscn" type="PackedScene" id=11]
+[ext_resource path="res://images/trophy.png" type="Texture" id=12]
+[ext_resource path="res://images/gear.png" type="Texture" id=13]
+[ext_resource path="res://images/expansion x1/upload.png" type="Texture" id=14]
+[ext_resource path="res://images/flare_12-export-export.png" type="Texture" id=15]
+[ext_resource path="res://Options.tscn" type="PackedScene" id=16]
+[ext_resource path="res://AchievementsMenu.tscn" type="PackedScene" id=17]
+[ext_resource path="res://Upgrades.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Random_Click_Event.tscn" type="PackedScene" id=19]
+[ext_resource path="res://images/1x/star.png" type="Texture" id=20]
+[ext_resource path="res://InfoCard.tscn" type="PackedScene" id=21]
+[ext_resource path="res://EventLog.tscn" type="PackedScene" id=22]
+[ext_resource path="res://images/1x/signal3.png" type="Texture" id=23]
+[ext_resource path="res://images/particles/dingbats-15_thumbnail.png" type="Texture" id=24]
+[ext_resource path="res://images/particles/dingbats-3_thumbnail.png" type="Texture" id=25]
+[ext_resource path="res://images/particles/dingbats-5_thumbnail.png" type="Texture" id=26]
+[ext_resource path="res://images/particles/dingbats-369_thumbnail.png" type="Texture" id=27]
+[ext_resource path="res://images/particles/dingbats-446_thumbnail.png" type="Texture" id=28]
+[ext_resource path="res://images/particles/target_23_thumbnail.png" type="Texture" id=29]
+[ext_resource path="res://images/particles/dingbats-346_thumbnail.png" type="Texture" id=30]
+[ext_resource path="res://images/particles/smoke_12-export.png" type="Texture" id=31]
+[ext_resource path="res://images/particles/spiral_37_thumbnail.png" type="Texture" id=32]
+[ext_resource path="res://images/particles/dingbats-382_thumbnail.png" type="Texture" id=33]
+[ext_resource path="res://images/particles/spiral_14_thumbnail.png" type="Texture" id=34]
+[ext_resource path="res://images/particles/dingbats-76_thumbnail.png" type="Texture" id=35]
+[ext_resource path="res://images/particles/target_9_thumbnail.png" type="Texture" id=36]
+[ext_resource path="res://images/particles/dingbats-102_thumbnail.png" type="Texture" id=37]
+[ext_resource path="res://PopupPanel.tscn" type="PackedScene" id=38]
+[ext_resource path="res://StatsMenu.tscn" type="PackedScene" id=39]
+[ext_resource path="res://presteigeMenu.tscn" type="PackedScene" id=40]
+
+[sub_resource type="Shader" id=4]
+code = "shader_type canvas_item;
+
+uniform vec2 dir = vec2(1.0, 1.0);
+uniform float speed = 0.05;
+
+void fragment(){
+	
+	vec2 move = dir * TIME * speed;
+	COLOR = texture(TEXTURE, UV + move);
+}"
+
+[sub_resource type="ShaderMaterial" id=5]
+shader = SubResource( 4 )
+shader_param/dir = Vector2( 1, 1 )
+shader_param/speed = 0.05
+
+[sub_resource type="Animation" id=6]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.564706, 0.890196, 0.435294, 0.0823529 ) ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "flash"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:self_modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0.564706, 0.890196, 0.435294, 0.517647 ), Color( 0.564706, 0.890196, 0.435294, 0.0823529 ) ]
+}
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.297578, 0.743945, 1 )
+colors = PoolColorArray( 0.121569, 0.239216, 0.847059, 0, 0.235294, 0.258824, 0.980392, 1, 0.290196, 0.796078, 0.909804, 1, 1, 1, 1, 0 )
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0, 0.484429, 1 )
+colors = PoolColorArray( 0, 0, 0, 0, 0.909804, 0.921569, 1, 1, 1, 1, 1, 0 )
+
+[node name="Perceptrons" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+theme = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+color = Color( 0.141176, 0.14902, 0.156863, 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+self_modulate = Color( 0.564706, 0.890196, 0.435294, 0.0588235 )
+material = SubResource( 5 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+texture = ExtResource( 9 )
+stretch_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = 20.0
+margin_right = -20.0
+margin_bottom = -20.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 12
+
+[node name="Top" type="Control" parent="VBoxContainer"]
+margin_right = 680.0
+margin_bottom = 100.0
+rect_min_size = Vector2( 0, 100 )
+mouse_filter = 1
+size_flags_horizontal = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Top"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 10
+
+[node name="HUD" parent="VBoxContainer/Top/HBoxContainer" instance=ExtResource( 8 )]
+margin_left = 0.0
+margin_right = 200.0
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="EventLog" parent="VBoxContainer/Top/HBoxContainer" instance=ExtResource( 22 )]
+unique_name_in_owner = true
+margin_left = 210.0
+margin_top = 0.0
+margin_right = 680.0
+margin_bottom = 68.0
+size_flags_vertical = 0
+
+[node name="Middle" type="Control" parent="VBoxContainer"]
+margin_top = 112.0
+margin_right = 680.0
+margin_bottom = 1006.0
+focus_mode = 1
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Visuals" type="CenterContainer" parent="VBoxContainer/Middle"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_vertical = 3
+
+[node name="CPU" type="TextureRect" parent="VBoxContainer/Middle/Visuals"]
+unique_name_in_owner = true
+self_modulate = Color( 0.564706, 0.890196, 0.435294, 0.0823529 )
+margin_top = 107.0
+margin_right = 680.0
+margin_bottom = 787.0
+rect_min_size = Vector2( 680, 680 )
+mouse_filter = 2
+size_flags_horizontal = 2
+size_flags_vertical = 2
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="VBoxContainer/Middle/Visuals/CPU"]
+anims/RESET = SubResource( 6 )
+anims/flash = SubResource( 7 )
+
+[node name="ParticleContainer" type="ViewportContainer" parent="VBoxContainer/Middle/Visuals"]
+unique_name_in_owner = true
+margin_left = 340.0
+margin_top = 447.0
+margin_right = 340.0
+margin_bottom = 447.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Click_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+scale = Vector2( 2, 2 )
+emitting = false
+amount = 10
+texture = ExtResource( 15 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+radial_accel = 75.61
+angle = 263.5
+angle_random = 1.0
+scale_amount = 0.13
+scale_amount_random = 0.68
+color = Color( 0.235294, 0.258824, 0.980392, 1 )
+color_ramp = SubResource( 1 )
+
+[node name="Tier0_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 7 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.564705, 0.89, 0.4361, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier1_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 25 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 1, 0.666667, 0, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier2_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 26 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.290196, 0.796078, 0.909804, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier3_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 31 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.141176, 0.14902, 0.156863, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier4_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 36 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.631373, 0.0666667, 0.0666667, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier5_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 34 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.623529, 0.156863, 0.67451, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier6_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 33 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.357572, 0.364431, 0.410156, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier7_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 30 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.0663204, 0.0109461, 0.175781, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier8_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 35 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.921569, 1, 0, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier9_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 24 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.0332389, 0.394531, 0.191304, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier10_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 37 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0, 0.296, 0.37, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier11_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 27 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 1, 0.351563, 0, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier12_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 28 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.847059, 0.592157, 0.854902, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier13_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 32 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0.564706, 0.890196, 0.435294, 0.517647 )
+color_ramp = SubResource( 2 )
+
+[node name="Tier14_Particles" type="CPUParticles2D" parent="VBoxContainer/Middle/Visuals/ParticleContainer"]
+unique_name_in_owner = true
+visible = false
+scale = Vector2( 2, 2 )
+amount = 1
+texture = ExtResource( 29 )
+emission_shape = 1
+emission_sphere_radius = 128.0
+spread = 180.0
+gravity = Vector2( 0, 0 )
+initial_velocity = 73.17
+angle = -403.9
+angle_random = 1.0
+scale_amount = 0.25
+scale_amount_random = 0.68
+color = Color( 0, 0, 0, 1 )
+color_ramp = SubResource( 2 )
+
+[node name="NeualNetContainer" type="Control" parent="VBoxContainer/Middle"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+focus_mode = 1
+mouse_filter = 2
+mouse_default_cursor_shape = 2
+
+[node name="Random_Click_Event" parent="VBoxContainer/Middle/NeualNetContainer" instance=ExtResource( 19 )]
+unique_name_in_owner = true
+
+[node name="Menus" type="Control" parent="VBoxContainer/Middle"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Tiers" parent="VBoxContainer/Middle/Menus" instance=ExtResource( 11 )]
+visible = false
+mouse_filter = 1
+
+[node name="Upgrades" parent="VBoxContainer/Middle/Menus" instance=ExtResource( 18 )]
+visible = false
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="Achievements" parent="VBoxContainer/Middle/Menus" instance=ExtResource( 17 )]
+unique_name_in_owner = true
+visible = false
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+mouse_filter = 1
+
+[node name="Options" parent="VBoxContainer/Middle/Menus" instance=ExtResource( 16 )]
+visible = false
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StatsMenu" parent="VBoxContainer/Middle/Menus" instance=ExtResource( 39 )]
+unique_name_in_owner = true
+visible = false
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+
+[node name="Navigation" type="HBoxContainer" parent="VBoxContainer"]
+margin_top = 1018.0
+margin_right = 680.0
+margin_bottom = 1108.0
+custom_constants/separation = 12
+
+[node name="ReferenceRect" type="ReferenceRect" parent="VBoxContainer/Navigation"]
+margin_right = 79.0
+margin_bottom = 90.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="computers_button" parent="VBoxContainer/Navigation" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_left = 91.0
+margin_top = 0.0
+margin_right = 181.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 90, 90 )
+size_flags_horizontal = 8
+text = ""
+icon = ExtResource( 10 )
+expand_icon = true
+
+[node name="notification" type="Sprite" parent="VBoxContainer/Navigation/computers_button"]
+visible = false
+self_modulate = Color( 1, 0.666667, 0, 1 )
+texture = ExtResource( 20 )
+
+[node name="upgrades_button" parent="VBoxContainer/Navigation" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_left = 193.0
+margin_top = 0.0
+margin_right = 283.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 90, 90 )
+size_flags_horizontal = 8
+text = ""
+icon = ExtResource( 14 )
+expand_icon = true
+
+[node name="notification" type="Sprite" parent="VBoxContainer/Navigation/upgrades_button"]
+visible = false
+self_modulate = Color( 1, 0.666667, 0, 1 )
+texture = ExtResource( 20 )
+
+[node name="achivements_button" parent="VBoxContainer/Navigation" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_left = 295.0
+margin_top = 0.0
+margin_right = 385.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 90, 90 )
+size_flags_horizontal = 8
+text = ""
+icon = ExtResource( 12 )
+expand_icon = true
+
+[node name="notification" type="Sprite" parent="VBoxContainer/Navigation/achivements_button"]
+visible = false
+self_modulate = Color( 1, 0.666667, 0, 1 )
+texture = ExtResource( 20 )
+
+[node name="stats_button" parent="VBoxContainer/Navigation" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_left = 397.0
+margin_top = 0.0
+margin_right = 487.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 90, 90 )
+size_flags_horizontal = 8
+text = ""
+icon = ExtResource( 23 )
+expand_icon = true
+
+[node name="notification" type="Sprite" parent="VBoxContainer/Navigation/stats_button"]
+visible = false
+self_modulate = Color( 1, 0.666667, 0, 1 )
+texture = ExtResource( 20 )
+
+[node name="options" parent="VBoxContainer/Navigation" instance=ExtResource( 4 )]
+margin_left = 499.0
+margin_top = 0.0
+margin_right = 589.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 90, 90 )
+size_flags_horizontal = 8
+text = ""
+icon = ExtResource( 13 )
+expand_icon = true
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="VBoxContainer/Navigation"]
+margin_left = 601.0
+margin_right = 680.0
+margin_bottom = 90.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="Button" parent="VBoxContainer" instance=ExtResource( 4 )]
+unique_name_in_owner = true
+margin_top = 1120.0
+margin_right = 680.0
+margin_bottom = 1240.0
+rect_min_size = Vector2( 0, 120 )
+text = "  "
+
+[node name="ClickMultiplier" type="Label" parent="VBoxContainer/Button"]
+unique_name_in_owner = true
+anchor_left = 0.646
+anchor_top = 0.317
+anchor_right = 0.813
+anchor_bottom = 0.742
+margin_left = -0.280029
+margin_top = -0.0400009
+margin_right = 0.159973
+margin_bottom = -0.0400009
+
+[node name="clickAmount" type="Label" parent="VBoxContainer/Button"]
+unique_name_in_owner = true
+anchor_left = 0.35
+anchor_right = 0.685
+anchor_bottom = 0.442
+margin_left = -1.52588e-05
+margin_right = 0.199951
+margin_bottom = -0.0400047
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/Button"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="VBoxContainer/Button/HBoxContainer"]
+margin_right = 237.0
+margin_bottom = 120.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/Button/HBoxContainer"]
+margin_left = 241.0
+margin_right = 291.0
+margin_bottom = 120.0
+rect_min_size = Vector2( 50, 30 )
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="VBoxContainer/Button/HBoxContainer"]
+margin_left = 295.0
+margin_top = 39.0
+margin_right = 438.0
+margin_bottom = 80.0
+text = "Compute"
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="VBoxContainer/Button/HBoxContainer"]
+margin_left = 442.0
+margin_right = 680.0
+margin_bottom = 120.0
+mouse_filter = 2
+size_flags_horizontal = 3
+
+[node name="notification" type="Sprite" parent="VBoxContainer/Button"]
+visible = false
+self_modulate = Color( 1, 0.666667, 0, 1 )
+texture = ExtResource( 20 )
+
+[node name="bgMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+pitch_scale = 0.68
+autoplay = true
+bus = "Music"
+
+[node name="InfoCard" parent="." instance=ExtResource( 21 )]
+unique_name_in_owner = true
+visible = false
+
+[node name="PrestigeMenu" parent="." instance=ExtResource( 40 )]
+visible = false
+
+[node name="HeadlinesTimer" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 240.0
+autostart = true
+
+[node name="Popup" parent="." instance=ExtResource( 38 )]
+unique_name_in_owner = true
+
+[connection signal="openLog" from="VBoxContainer/Top/HBoxContainer/EventLog" to="." method="_on_EventLog_openLog"]
+[connection signal="clicked" from="VBoxContainer/Middle/NeualNetContainer/Random_Click_Event" to="." method="_on_Random_Click_Event_clicked"]
+[connection signal="notification" from="VBoxContainer/Middle/Menus/Tiers" to="." method="_on_Tiers_notification"]
+[connection signal="notification" from="VBoxContainer/Middle/Menus/Upgrades" to="." method="_on_Upgrades_notification"]
+[connection signal="Toggle_Particles" from="VBoxContainer/Middle/Menus/Options" to="." method="_on_Options_Toggle_Particles"]
+[connection signal="popup" from="VBoxContainer/Middle/Menus/StatsMenu" to="." method="_on_StatsMenu_popup"]
+[connection signal="pressed" from="VBoxContainer/Navigation/computers_button" to="." method="_on_buy_pressed"]
+[connection signal="pressed" from="VBoxContainer/Navigation/upgrades_button" to="." method="_on_upgrades_pressed"]
+[connection signal="pressed" from="VBoxContainer/Navigation/achivements_button" to="." method="_on_achivements_pressed"]
+[connection signal="pressed" from="VBoxContainer/Navigation/stats_button" to="." method="_on_stats_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/Navigation/options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="timeout" from="HeadlinesTimer" to="." method="_on_HeadlinesTimer_timeout"]

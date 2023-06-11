@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/achievments/achievment.gd" type="Script" id=1]
+[ext_resource path="res://images/1x/signal3.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "CPS64k"
+Icon = ExtResource( 2 )
+Hidden = false
+Recived = false
+NewNotif = false
+OCPoints = 4
+Description = "Earn at least 64k cps"
+PerkDescription = "All comuters speed increases by 4%"

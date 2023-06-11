@@ -1,0 +1,33 @@
+{
+  "name": "generator_tiers",
+  "version": "1.0.0",
+  "tiers": [
+    {
+      "name": "Logic Theorist",
+      "description": "Logic Theorist (1956): This was the first AI system capable of proving mathematical theorems.",
+      "owned": 0,
+      "genAmt": 1,
+      "genSpd": 1,
+      "startPrice": 10,
+      "priceMultiplier": 1.1
+    },
+    {
+      "name": "General Problem Solver",
+      "description": "General Problem Solver (1957): This was one of the first AI systems capable of reasoning and problem-solving in a general way.",
+      "owned": 0,
+      "genAmt": 10,
+      "genSpd": 1,
+      "startPrice": 100,
+      "priceMultiplier": 1.2
+    },
+    {
+      "name": "ELIZA",
+      "description": "ELIZA (1966): This was an early natural language processing program that simulated a conversation between a human and a computer.",
+      "owned": 0,
+      "genAmt": 100,
+      "genSpd": 1,
+      "startPrice": 1000,
+      "priceMultiplier": 1.3
+    }
+  ]
+}

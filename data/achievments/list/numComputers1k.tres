@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/achievments/achievment.gd" type="Script" id=1]
+[ext_resource path="res://images/expansion x1/cpu.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "numComputers1k"
+Icon = ExtResource( 2 )
+Hidden = false
+Recived = false
+NewNotif = false
+OCPoints = 3
+Description = "Own a total of 1k Computers"
+PerkDescription = "The price of Computers Deceases by 3%"

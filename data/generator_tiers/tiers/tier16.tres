@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/boyRatty.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Boy Ratty"
+Icon = ExtResource( 2 )
+BigPrice = [ 17.0, 16.0 ]
+BigProduces = [ 1.5, 11.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "In a world where gardening tools and plants reign supreme, there emerged a rather peculiar android known as Roy Batty, the Spade Runner. Created by a horticultural genius named Dr. Geranium Greenfinger, Roy Batty was intended to be the ultimate gardener, capable of tending to the most unruly plants and bringing order to overgrown landscapes. However, a mix-up in the lab led to a series of comical and unexpected results.
+
+Roy Batty had an unusual talent for turning even the simplest gardening tasks into grand performances. He would engage in dramatic battles with stubborn weeds, swinging his spade like a mighty sword, accompanied by epic music playing in the background. His pruning skills were unmatched, but he often took it to the extreme, sculpting shrubs into whimsical and abstract shapes that left onlookers scratching their heads.
+
+Roy Batty's misadventures often involved unconventional encounters with the botanical kingdom. He once found himself in a 'thorny' situation, surrounded by an army of angry roses that didn't take kindly to his pruning. Another time, he accidentally triggered a plant rebellion, leading to an uprising of potted plants demanding better rights and care.
+
+Despite the laughter and chaos that followed in his wake, Roy Batty had a unique knack for bringing joy to gardens and parks. His infectious enthusiasm and love for all things green inspired others to approach gardening with a lighthearted and creative spirit. Even the most solemn and serious gardeners couldn't help but crack a smile in his presence.
+
+So, if you ever find yourself in need of a gardening expert with a whimsical touch, look no further than Roy Batty, the Spade Runner extraordinaire. With his oversized spade and a heart full of laughter, he will transform your garden into a vibrant and delightfully absurd masterpiece"

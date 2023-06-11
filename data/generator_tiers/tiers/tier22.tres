@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/ZITT.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "ZITT"
+Icon = ExtResource( 2 )
+BigPrice = [ 23.0, 22.0 ]
+BigProduces = [ 2.5, 15.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "In a world of zany gadgets and whimsical technology, ZITT (Zesty Industries Two Thousand) emerged as the ultimate companion in the satirical series \"Day Rider.\" Created by the eccentric inventor Dr. Wobbleton, ZITT was meant to be a state-of-the-art automotive marvel, but things took an unexpected turn.
+
+Dr. Wobbleton, renowned for his peculiar sense of humor, decided to infuse ZITT with an excessive dose of zest. As a result, ZITT developed a hyperactive personality that made it prone to spontaneous dance routines, flamboyant gestures, and an unquenchable thirst for adventure.
+
+Unlike its serious and crime-fighting counterpart, ZITT's primary objective was to spread joy, laughter, and unpredictable antics. Equipped with an arsenal of unconventional gadgets, ZITT's functionality often led to hilarious and unexpected consequences. Its \"Turbo Giggle Boost\" propelled the vehicle into fits of uncontrollable laughter, leaving onlookers bewildered and entertained.
+
+The show \"Day Rider\" followed the adventures of a cheerful and offbeat protagonist, always accompanied by the exuberant ZITT. Each episode featured an array of misadventures, from mistaken identity shenanigans to side-splitting encounters with the local townsfolk. ZITT's mischievous nature often got the duo into amusing predicaments, but its infectious enthusiasm and unwavering optimism saved the day in its own unconventional way.
+
+ZITT's voice, a blend of energetic chatter and exaggerated exclamations, had a tendency to burst into impromptu musical performances, catching both allies and enemies off guard. Its flamboyant persona and unpredictable behavior added a touch of whimsy to the already wacky world of \"Day Rider.\"
+
+While ZITT may not have been the crime-fighting hero its creators envisioned, it became a symbol of unapologetic fun and carefree spirit. With its zestful personality and outrageous antics, ZITT showed the world that sometimes laughter and joy can be the greatest superpowers of all."

@@ -1,0 +1,170 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://theme.tres" type="Theme" id=1]
+[ext_resource path="res://images/chip128.png" type="Texture" id=2]
+[ext_resource path="res://fonts/Exo_2/static/Exo2-Black.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://addons/simple-gui-transitions/transition.gd" type="Script" id=4]
+[ext_resource path="res://presteigeMenu.gd" type="Script" id=5]
+[ext_resource path="res://OCPointsPanel.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Button.tscn" type="PackedScene" id=7]
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 1, 1 )
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.141176, 0.14902, 0.156863, 1 )
+border_width_top = 6
+border_color = Color( 0.1911, 0.225972, 0.49, 1 )
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+shadow_size = 2
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 42
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.152941, 0.141176, 0.309804, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+corner_detail = 12
+shadow_size = 2
+shadow_offset = Vector2( 2, 2 )
+anti_aliasing_size = 2.0
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.141176, 0.14902, 0.156863, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_detail = 12
+expand_margin_right = 10.0
+
+[node name="PrestigeMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 1 )
+script = ExtResource( 5 )
+
+[node name="GuiTransition" type="Node" parent="."]
+script = ExtResource( 4 )
+animation_enter = 5
+animation_leave = 5
+layout = NodePath("..")
+group = NodePath("..")
+
+[node name="MainPanel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_styles/panel = SubResource( 6 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_right = -20.0
+custom_constants/separation = 20
+
+[node name="Header" type="Panel" parent="MainPanel/VBoxContainer"]
+margin_right = 680.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 90 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/VBoxContainer/Header"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="MainPanel/VBoxContainer/Header/HBoxContainer"]
+margin_right = 197.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+
+[node name="Title" type="Label" parent="MainPanel/VBoxContainer/Header/HBoxContainer"]
+margin_left = 201.0
+margin_top = 19.0
+margin_right = 414.0
+margin_bottom = 70.0
+custom_fonts/font = SubResource( 2 )
+text = "OverClock"
+align = 1
+valign = 1
+
+[node name="Icon" type="TextureRect" parent="MainPanel/VBoxContainer/Header/HBoxContainer"]
+margin_left = 418.0
+margin_right = 478.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 60, 60 )
+size_flags_vertical = 3
+texture = ExtResource( 2 )
+expand = true
+stretch_mode = 6
+
+[node name="ReferenceRect2" type="ReferenceRect" parent="MainPanel/VBoxContainer/Header/HBoxContainer"]
+margin_left = 482.0
+margin_right = 680.0
+margin_bottom = 90.0
+size_flags_horizontal = 3
+
+[node name="ContentPanel" type="Panel" parent="MainPanel/VBoxContainer"]
+margin_top = 110.0
+margin_right = 680.0
+margin_bottom = 1140.0
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 3 )
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MainPanel/VBoxContainer/ContentPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+scroll_horizontal_enabled = false
+scroll_deadzone = 10
+
+[node name="ItemContainer" type="VBoxContainer" parent="MainPanel/VBoxContainer/ContentPanel/ScrollContainer"]
+unique_name_in_owner = true
+margin_right = 680.0
+margin_bottom = 1030.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Footer" type="MarginContainer" parent="MainPanel/VBoxContainer"]
+margin_top = 1160.0
+margin_right = 680.0
+margin_bottom = 1280.0
+rect_min_size = Vector2( 0, 120 )
+custom_constants/margin_right = 10
+
+[node name="Panel" type="Panel" parent="MainPanel/VBoxContainer/Footer"]
+margin_right = 670.0
+margin_bottom = 120.0
+custom_styles/panel = SubResource( 5 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainPanel/VBoxContainer/Footer"]
+margin_top = 14.0
+margin_right = 670.0
+margin_bottom = 106.0
+size_flags_vertical = 4
+
+[node name="OC_Points" type="MarginContainer" parent="MainPanel/VBoxContainer/Footer/HBoxContainer"]
+margin_right = 333.0
+margin_bottom = 92.0
+rect_min_size = Vector2( 0, 60 )
+size_flags_horizontal = 3
+custom_constants/margin_top = 12
+custom_constants/margin_left = 12
+
+[node name="OCPointsPanel" parent="MainPanel/VBoxContainer/Footer/HBoxContainer/OC_Points" instance=ExtResource( 6 )]
+
+[node name="Done" parent="MainPanel/VBoxContainer/Footer/HBoxContainer" instance=ExtResource( 7 )]
+margin_left = 337.0
+margin_top = 0.0
+margin_right = 670.0
+margin_bottom = 92.0
+size_flags_horizontal = 3
+text = "Done"
+
+[connection signal="pressed" from="MainPanel/VBoxContainer/Footer/HBoxContainer/Done" to="." method="_on_Done_pressed"]

@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/LogicTheorist.png" type="Texture" id=1]
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "Logic Theorist"
+Icon = ExtResource( 1 )
+BigPrice = [ 2.0, 1.0 ]
+BigProduces = [ 1.0, 0.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "Logic Theorist, developed by Allen Newell and Herbert A. Simon in 1956, was one of the pioneering AI systems and a significant milestone in the field. It was designed to prove mathematical theorems using symbolic logic and automated reasoning.
+
+The goal of Logic Theorist was to demonstrate that a computer program could reason and solve complex problems in a way that resembled human problem-solving. It focused on proving mathematical theorems within the domain of Principia Mathematica, a landmark work in formal logic.
+
+Logic Theorist employed a heuristic search algorithm known as the \"heuristic of pure symbolic differentiation.\" It would start with an initial set of axioms and attempt to derive new theorems by applying logical rules and transformations. The program employed various problem-solving strategies and heuristics to guide its search and prune unpromising branches.
+
+One of Logic Theorist's most notable achievements was proving 38 out of the first 52 theorems in Principia Mathematica. While it couldn't match the human intuition and insight required to solve every theorem, its success showcased the potential of AI in tackling complex logical problems.
+
+Logic Theorist laid the groundwork for subsequent AI research and the development of expert systems, which used rule-based reasoning to solve problems in specific domains. It demonstrated that computers could be programmed to perform intelligent tasks traditionally associated with human intelligence, fueling further advancements in AI and automated reasoning."

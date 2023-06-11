@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/Watson.png" type="Texture" id=1]
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "Watson"
+Icon = ExtResource( 1 )
+BigPrice = [ 7.0, 6.0 ]
+BigProduces = [ 1.5, 4.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "Watson is an AI system developed by IBM. It gained widespread recognition when it competed and won against human contestants on the quiz show Jeopardy! in 2011. Watson's success demonstrated the potential of AI in natural language understanding and knowledge retrieval across a wide range of domains.
+
+Watson was designed to process and analyze large amounts of unstructured data, including text documents, books, websites, and other sources of information. It leveraged a combination of advanced technologies, such as natural language processing, machine learning, and deep learning, to understand and respond to complex questions posed in natural language.
+
+One of the key components of Watson's architecture is its DeepQA framework. DeepQA utilizes various algorithms and techniques to analyze, interpret, and generate answers to questions. It employs advanced information retrieval methods, statistical analysis, and evidence-based reasoning to assess the confidence and relevance of potential answers.
+
+Watson's success on Jeopardy! was a significant achievement in the field of AI. It showcased the ability of the system to comprehend natural language, process vast amounts of data, and generate accurate responses within a limited time frame. Watson's victory demonstrated the potential of AI systems to excel in tasks that require knowledge representation, reasoning, and language understanding.
+
+Beyond Jeopardy!, Watson has found applications in various industries and domains. It has been used in healthcare to assist doctors in diagnosing and treating diseases, in finance for fraud detection and risk assessment, and in customer service for providing personalized recommendations and assistance.
+
+IBM has also made Watson's capabilities available through its Watson API and cloud-based services, allowing developers and businesses to harness the power of Watson's natural language processing, machine learning, and other AI functionalities in their own applications and solutions.
+
+Watson's development and continued advancements have contributed to the progression of AI research, particularly in the areas of natural language understanding, knowledge retrieval, and question-answering systems. It has become a prominent symbol of the potential and possibilities of AI in real-world applications."

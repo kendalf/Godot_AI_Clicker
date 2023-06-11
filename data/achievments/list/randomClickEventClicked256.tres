@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/achievments/achievment.gd" type="Script" id=1]
+[ext_resource path="res://images/dingbats-22-export2.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "randomClickEventClicked256"
+Icon = ExtResource( 2 )
+Hidden = false
+Recived = false
+NewNotif = false
+OCPoints = 4
+Description = "Catch 256 Neural Nets"
+PerkDescription = "Neural Nets appear 10% more often"

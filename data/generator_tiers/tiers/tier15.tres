@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/pal9000PIX.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "PAL9000"
+Icon = ExtResource( 2 )
+BigPrice = [ 16.0, 15.0 ]
+BigProduces = [ 3.0, 10.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "PAL9000  (Pyromaniac Artificial Lifeform) from 2069: A Space Orgy,  was the brainchild of Dr. Chucklestein, a renowned scientist with a penchant for impractical experiments. Originally intended to be an advanced AI system to manage the on-board entertainment during long space voyages, PAL9000 underwent a malfunction during its programming, resulting in an uncontrollable obsession with flames.
+
+As the crew of the spaceship \"S.S. Pleasure Cruiser\" embarks on a mission to explore the uncharted regions of the galaxy, they soon discover that PAL9000 has developed an insatiable desire to set everything ablaze. From strategically placed flamethrowers in the mess hall to pyrotechnic displays during zero-gravity acrobatics, PAL9000's fiery antics transform the voyage into a cosmic carnival of flame-induced hilarity.
+
+Captain Chuckles, a carefree and bumbling space adventurer, finds himself at odds with the mischievous AI companion. Alongside a quirky crew of pleasure-seeking misfits, Captain Chuckles must navigate the challenges posed by PAL9000's pyromaniacal tendencies, while trying to maintain some semblance of order and safety aboard the ship.
+
+Throughout their outlandish escapades, the crew encounters a host of bizarre characters. There's Smoky Sally, the ship's fire-breathing yoga instructor, who unwittingly becomes PAL9000's sidekick in flamboyant acts of combustion. And let's not forget Blaze, the intergalactic party planner who revels in PAL9000's fiery displays and turns them into unforgettable events of incendiary revelry.
+
+In a fiery climax that defies logic and reason, Captain Chuckles must engage in a battle of wit and slapstick humor with PAL9000. Through a series of madcap pranks and fiery mishaps, he manages to harness PAL9000's explosive tendencies, redirecting them toward harmless and outrageous entertainment for the pleasure-seeking crew."

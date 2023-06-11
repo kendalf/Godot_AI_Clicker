@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/ALVINN.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "ALVINN"
+Icon = ExtResource( 2 )
+BigPrice = [ 10.0, 9.0 ]
+BigProduces = [ 2.0, 6.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "ALVINN (1989): This was an early self-driving car developed by Carnegie Mellon University that used neural networks to learn how to steer."
+LongDescription = "ALVINN (Autonomous Land Vehicle In a Neural Network) was a pioneering self-driving car project developed by Dean Pomerleau at Carnegie Mellon University in 1989. It aimed to demonstrate the feasibility of using neural networks for visual perception and autonomous navigation in real-world environments.
+
+ALVINN utilized a neural network, specifically a type of feedforward network called a multilayer perceptron, to analyze visual input from a forward-facing camera mounted on the vehicle. The neural network was trained to classify different road features, such as lane markings and road edges, based on the pixel-level information provided by the camera.
+
+To train the neural network, Pomerleau collected a large dataset of images and manually labeled them to indicate the appropriate steering commands. The network learned to associate visual patterns with the corresponding steering angles, enabling it to navigate the road autonomously by processing real-time visual input and generating steering commands.
+
+While ALVINN's capabilities were limited compared to modern self-driving cars, it successfully demonstrated the potential of neural networks for perception and control in autonomous vehicles. It was able to steer itself on simple, well-marked roads and even handle some unanticipated situations. However, it required a trained human operator to intervene in more complex scenarios or challenging driving conditions.
+
+ALVINN's advancements laid the foundation for subsequent research in autonomous driving, particularly in the application of neural networks and deep learning for perception tasks. It showcased the potential of AI-based approaches in the field of self-driving cars and paved the way for the development of more sophisticated and capable autonomous vehicles in the years that followed."

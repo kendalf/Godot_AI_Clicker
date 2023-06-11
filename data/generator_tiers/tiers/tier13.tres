@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/MuZero.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "MuZero"
+Icon = ExtResource( 2 )
+BigPrice = [ 14.0, 13.0 ]
+BigProduces = [ 1.25, 9.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "MuZero (2020): This is an AI system developed by DeepMind that can learn how to play complex board games, such as Go and Chess, without any prior knowledge of the game rules or strategies."
+LongDescription = "MuZero is an AI algorithm developed by DeepMind, the same team behind AlphaGo and AlphaZero. It is a general-purpose algorithm capable of mastering multiple domains without prior knowledge or domain-specific rules. MuZero combines techniques from reinforcement learning, tree search, and Monte Carlo methods to achieve its impressive capabilities.
+
+The key innovation of MuZero lies in its ability to learn and plan in an environment with unknown rules. Unlike previous AI systems that required explicit knowledge of the rules of the game or domain, MuZero learns by interacting with the environment and gathering information through self-play. It is a model-based algorithm that learns a predictive model of the environment and uses this model for planning and decision-making.
+
+MuZero starts with random initializations and progressively refines its understanding of the environment through a process of self-play and learning from the outcomes. It learns to predict the future states, rewards, and values of actions by constructing a compact model of the environment. Using this learned model, MuZero performs Monte Carlo tree search to simulate possible future trajectories and selects actions based on the results of the search.
+
+Through a combination of neural networks and reinforcement learning techniques, MuZero can achieve impressive performance across a range of domains, including board games, video games, and other sequential decision-making problems. It has demonstrated superior performance compared to previous AI systems that relied on domain-specific knowledge or rules.
+
+MuZero's general-purpose nature allows it to adapt to different environments and learn optimal strategies without explicit guidance. It has the potential for applications in various fields, including robotics, game-playing, planning, and decision-making in complex domains.
+
+The development of MuZero has opened up new possibilities for AI systems to learn and perform well in diverse environments without prior knowledge or explicit rules. It showcases the power of combining deep learning, reinforcement learning, and planning techniques to create adaptive and intelligent agents. The continued research and development of MuZero and related algorithms are expected to contribute further to the advancement of AI systems capable of autonomous learning and decision-making."

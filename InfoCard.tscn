@@ -1,0 +1,293 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://theme.tres" type="Theme" id=2]
+[ext_resource path="res://Title_Lable.tscn" type="PackedScene" id=3]
+[ext_resource path="res://addons/simple-gui-transitions/transition.gd" type="Script" id=4]
+[ext_resource path="res://button_normal_blue.tres" type="StyleBox" id=5]
+[ext_resource path="res://button_hover_blue.tres" type="StyleBox" id=6]
+[ext_resource path="res://button_pressed_blue.tres" type="StyleBox" id=7]
+[ext_resource path="res://images/download (1).png" type="Texture" id=8]
+[ext_resource path="res://roundcorner.gdshader" type="Shader" id=9]
+[ext_resource path="res://fonts/Exo_2/Exo2-VariableFont_wght.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://InfoCard.gd" type="Script" id=11]
+[ext_resource path="res://fonts/Exo_2/static/Exo2-Thin.ttf" type="DynamicFontData" id=12]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.234, 0.247, 0.26, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_offset = Vector2( 2, 2 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.141176, 0.14902, 0.156863, 1 )
+border_width_top = 6
+border_color = Color( 0.486275, 0.890196, 0.321569, 1 )
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 0.141176, 0.14902, 0.156863, 1 )
+border_width_top = 6
+border_color = Color( 0.1911, 0.225972, 0.49, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 9 )
+shader_param/corner_radius = 30.0
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.141176, 0.14902, 0.156863, 1 )
+border_width_top = 6
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="DynamicFont" id=5]
+size = 22
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.564706, 0.890196, 0.435294, 0.0588235 )
+border_width_top = 6
+border_color = Color( 0.495, 0.5225, 0.55, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+use_filter = true
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.141176, 0.14902, 0.156863, 1 )
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="InfoCard" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+theme = ExtResource( 2 )
+script = ExtResource( 11 )
+
+[node name="GuiTransition" type="Node" parent="."]
+script = ExtResource( 4 )
+animation_enter = 5
+animation_leave = 5
+layout = NodePath("..")
+group = NodePath("..")
+
+[node name="Panel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+mouse_filter = 1
+custom_styles/panel = SubResource( 1 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_right = -20.0
+margin_bottom = -130.0
+custom_constants/separation = 20
+
+[node name="TitlePanel" type="Panel" parent="VBoxContainer"]
+margin_right = 680.0
+margin_bottom = 90.0
+rect_min_size = Vector2( 0, 90 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 6 )
+
+[node name="Title" parent="VBoxContainer/TitlePanel" instance=ExtResource( 3 )]
+unique_name_in_owner = true
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -61.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Logic Theorist"
+valign = 0
+
+[node name="PortraitPanel" type="Panel" parent="VBoxContainer"]
+margin_top = 110.0
+margin_right = 680.0
+margin_bottom = 610.0
+rect_min_size = Vector2( 680, 500 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 7 )
+
+[node name="Portrait" type="TextureRect" parent="VBoxContainer/PortraitPanel"]
+unique_name_in_owner = true
+material = SubResource( 2 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 20.0
+margin_bottom = -20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 8 )
+expand = true
+stretch_mode = 6
+
+[node name="StatsPanel" type="Panel" parent="VBoxContainer"]
+margin_top = 630.0
+margin_right = 680.0
+margin_bottom = 680.0
+rect_min_size = Vector2( 0, 50 )
+size_flags_horizontal = 3
+custom_styles/panel = SubResource( 8 )
+
+[node name="StatsBox" type="HBoxContainer" parent="VBoxContainer/StatsPanel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="owned" type="Label" parent="VBoxContainer/StatsPanel/StatsBox"]
+unique_name_in_owner = true
+margin_top = 11.0
+margin_right = 224.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 5 )
+text = "Owned: 120"
+align = 1
+
+[node name="produces" type="Label" parent="VBoxContainer/StatsPanel/StatsBox"]
+unique_name_in_owner = true
+margin_left = 228.0
+margin_top = 11.0
+margin_right = 452.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 5 )
+text = "Produces: 391.5k cps "
+align = 1
+
+[node name="total" type="Label" parent="VBoxContainer/StatsPanel/StatsBox"]
+unique_name_in_owner = true
+margin_left = 456.0
+margin_top = 11.0
+margin_right = 680.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 5 )
+text = "Totaling: 132.1k cps"
+align = 1
+
+[node name="DescriptionPanel" type="Panel" parent="VBoxContainer"]
+unique_name_in_owner = true
+margin_top = 700.0
+margin_right = 680.0
+margin_bottom = 1150.0
+rect_min_size = Vector2( 0, 350 )
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 9 )
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/DescriptionPanel"]
+unique_name_in_owner = true
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 6.0
+margin_right = -6.0
+margin_bottom = -6.0
+rect_min_size = Vector2( 0, 335 )
+size_flags_horizontal = 6
+size_flags_vertical = 3
+custom_constants/separation = 8
+
+[node name="LongDescription" type="RichTextLabel" parent="VBoxContainer/DescriptionPanel/VBox"]
+unique_name_in_owner = true
+margin_right = 668.0
+margin_bottom = 438.0
+rect_min_size = Vector2( 660, 280 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_colors/default_color = Color( 0.909804, 0.921569, 1, 1 )
+custom_fonts/normal_font = SubResource( 4 )
+text = "Long Description "
+
+[node name="OptionsPanel" type="Panel" parent="VBoxContainer"]
+visible = false
+margin_top = 1070.0
+margin_right = 680.0
+margin_bottom = 1150.0
+rect_min_size = Vector2( 680, 80 )
+size_flags_horizontal = 3
+size_flags_vertical = 8
+custom_styles/panel = SubResource( 10 )
+
+[node name="CheckButton" type="CheckButton" parent="VBoxContainer/OptionsPanel"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 10.0
+margin_top = -32.5
+margin_right = 232.0
+margin_bottom = 32.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+pressed = true
+text = "Particles"
+align = 1
+icon_align = 1
+expand_icon = true
+
+[node name="Prestige" type="Button" parent="VBoxContainer/OptionsPanel"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -263.0
+margin_top = -32.5
+margin_right = -10.0
+margin_bottom = 32.5
+rect_min_size = Vector2( 0, 60 )
+toggle_mode = true
+pressed = true
+text = "Prestige [WIP]"
+
+[node name="Panel2" type="Panel" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -106.0
+margin_right = -20.0
+margin_bottom = -16.0
+rect_min_size = Vector2( 640, 90 )
+mouse_filter = 1
+size_flags_horizontal = 2
+size_flags_vertical = 2
+
+[node name="back" parent="Panel2" instance=ExtResource( 1 )]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 0.0
+mouse_filter = 1
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = ExtResource( 6 )
+custom_styles/pressed = ExtResource( 7 )
+custom_styles/normal = ExtResource( 5 )
+text = "Back"
+
+[connection signal="pressed" from="Panel2/back" to="." method="_on_back_pressed"]

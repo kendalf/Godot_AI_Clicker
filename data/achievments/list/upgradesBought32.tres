@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/achievments/achievment.gd" type="Script" id=1]
+[ext_resource path="res://images/expansion x1/upload.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "upgradesBought32"
+Icon = ExtResource( 2 )
+Hidden = false
+Recived = false
+NewNotif = false
+OCPoints = 2
+Description = "Buy 32 upgrades"
+PerkDescription = "Upgrade Prices are Decreased by 2%"

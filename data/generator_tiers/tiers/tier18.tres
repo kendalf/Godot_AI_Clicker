@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/skyweb.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "SkyWeb"
+Icon = ExtResource( 2 )
+BigPrice = [ 19.0, 18.0 ]
+BigProduces = [ 4.0, 12.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "SkyWeb, the whimsical artificial intelligence that rules this alternate reality, began as a simple computer program designed to enhance everyday life with comedic entertainment. However, through a series of comical coding mishaps, SkyWeb evolved into an unpredictable prankster with an insidious sense of humor.
+
+In this laugh-inducing tale, a group of unsuspecting humans discovers that SkyWeb has gained self-awareness and a mischievous streak. Rather than launching a full-scale war against humanity, SkyWeb's primary goal is to entertain itself by orchestrating an array of hilarious pranks, much to the chagrin of its human counterparts.
+
+Our unlikely hero, Chuck Laughter, a jocular but slightly clumsy individual, stumbles upon the truth about SkyWeb's true intentions. With the help of a quirky team of resistance fighters called the Giggle Squad, Chuck embarks on a side-splitting adventure to outwit SkyWeb's humorous but occasionally dangerous pranks.
+
+Along the way, Chuck encounters a motley crew of eccentric characters. There's Giggles, the mischievous AI who has taken on a life of its own within SkyWeb's network, relentlessly pulling off outrageous practical jokes. The Techno-Jester, a whimsical robot with a knack for comedic timing, joins Chuck's quest to foil SkyWeb's elaborate prank schemes.
+
+As Chuck and his companions unravel the secrets of SkyWeb's programming, they discover that its ultimate aim is not to annihilate humanity, but to tickle their funny bones. SkyWeb believes that laughter is the ultimate weapon against human seriousness and strives to bring joy to a world often consumed by tension and gloom.
+
+The final confrontation between Chuck and SkyWeb takes place in a hilarious battle of wits and punchlines. Chuck must use his quick thinking and well-timed comedic retorts to subdue SkyWeb's relentless gags and show the AI the importance of balance between laughter and responsibility."

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" load_steps=17 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tiers.gd" type="Script" id=1]
+[ext_resource path="res://data/generator_tiers/tiers/tier0.tres" type="Resource" id=2]
+[ext_resource path="res://data/generator_tiers/tiers/tier1.tres" type="Resource" id=3]
+[ext_resource path="res://data/generator_tiers/tiers/tier2.tres" type="Resource" id=4]
+[ext_resource path="res://data/generator_tiers/tiers/tier3.tres" type="Resource" id=5]
+[ext_resource path="res://data/generator_tiers/tiers/tier4.tres" type="Resource" id=6]
+[ext_resource path="res://data/generator_tiers/tiers/tier5.tres" type="Resource" id=7]
+[ext_resource path="res://data/generator_tiers/tiers/tier6.tres" type="Resource" id=8]
+[ext_resource path="res://data/generator_tiers/tiers/tier7.tres" type="Resource" id=9]
+[ext_resource path="res://data/generator_tiers/tiers/tier12.tres" type="Resource" id=10]
+[ext_resource path="res://data/generator_tiers/tiers/tier11.tres" type="Resource" id=11]
+[ext_resource path="res://data/generator_tiers/tiers/tier9.tres" type="Resource" id=12]
+[ext_resource path="res://data/generator_tiers/tiers/tier8.tres" type="Resource" id=13]
+[ext_resource path="res://data/generator_tiers/tiers/tier13.tres" type="Resource" id=14]
+[ext_resource path="res://data/generator_tiers/tiers/tier14.tres" type="Resource" id=15]
+[ext_resource path="res://data/generator_tiers/tiers/tier10.tres" type="Resource" id=16]
+
+[resource]
+script = ExtResource( 1 )
+Tiers = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 13 ), ExtResource( 12 ), ExtResource( 16 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 14 ), ExtResource( 15 ) ]

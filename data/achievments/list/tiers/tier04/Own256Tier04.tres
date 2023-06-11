@@ -1,0 +1,15 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/achievments/achievment.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/MYCIN.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Own256Tier03"
+Icon = ExtResource( 2 )
+Hidden = false
+Recived = false
+NewNotif = false
+OCPoints = 4
+Description = "Own 256 Shakeys"
+PerkDescription = "Double the productivity of Shakey"

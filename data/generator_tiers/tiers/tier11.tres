@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/Siri.png" type="Texture" id=1]
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "Siri"
+Icon = ExtResource( 1 )
+BigPrice = [ 12.0, 11.0 ]
+BigProduces = [ 5.0, 7.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "Siri (2011): This was an AI-powered virtual assistant developed by Apple that could answer questions, perform tasks, and interact with users in natural language."
+LongDescription = "Siri is an AI-powered virtual assistant developed by Apple Inc. It was first introduced as a standalone app in 2010 for iOS devices and later integrated into Apple's operating systems, including iOS, macOS, watchOS, and HomePod.
+
+Siri uses a combination of natural language processing, machine learning, and voice recognition technologies to understand and respond to user commands and queries. Its primary function is to provide users with a conversational interface to interact with their devices and access various services and information.
+
+Siri can perform a wide range of tasks, including answering questions, providing recommendations, sending messages, making phone calls, setting reminders, playing music, and controlling smart home devices. It integrates with various built-in Apple apps and services, as well as third-party apps, to offer a seamless user experience.
+
+Siri's natural language processing capabilities allow it to understand and interpret user commands and queries in a conversational manner. It can recognize and extract relevant information from spoken or typed input and generate appropriate responses. Siri's ability to adapt to individual users and learn from their preferences and behavior contributes to its personalized and context-aware interactions.
+
+The underlying technology of Siri involves a combination of on-device processing and cloud-based services. On-device processing ensures faster response times and privacy for certain tasks, while more complex requests may require access to Apple's cloud infrastructure for processing and retrieval of information.
+
+Over the years, Siri has undergone continuous improvements and updates, with enhanced language support, expanded functionality, and improved accuracy. It has also been integrated into various Apple devices and services, such as Apple Watch, AirPods, CarPlay, and HomePod, extending its reach and accessibility.
+
+Siri's development has influenced the broader adoption of virtual assistant technology, inspiring other companies to develop their own AI-powered assistants. It has played a significant role in popularizing the concept of voice-controlled AI and shaping user expectations for intelligent, voice-activated interfaces.
+
+As AI technology advances, Siri continues to evolve, offering users increasingly sophisticated features and capabilities. Apple's ongoing research and development efforts aim to enhance Siri's understanding, responsiveness, and integration across Apple's ecosystem, contributing to the broader landscape of AI-powered virtual assistants."

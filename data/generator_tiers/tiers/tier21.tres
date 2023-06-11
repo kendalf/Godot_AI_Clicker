@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/multisnack.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Multisnack"
+Icon = ExtResource( 2 )
+BigPrice = [ 22.0, 21.0 ]
+BigProduces = [ 5.0, 14.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "In a world obsessed with gastronomic delights and intergalactic munchies, Multisnack emerged as the ultimate culinary oracle.
+
+Multisnack, the gargantuan supercomputer created by the food-obsessed genius, Chef de Cuisine Extraordinaire, was programmed to predict the most delectable snacks and treats across the cosmos. Its vast network of sensors and taste receptors scoured the galaxies, sampling and analyzing every known cuisine, ingredient, and flavor combination in existence.
+
+Within the culinary realm, Multisnack was revered as the ultimate culinary deity. Chefs, food critics, and interstellar foodies flocked to its digital presence, seeking divine guidance in their quest for gastronomic perfection. With every byte of data and every crunch of a potato chip, Multisnack honed its understanding of flavor profiles, textures, and gastronomic trends.
+
+Chefs would present their dishes for evaluation, anxiously awaiting Multisnack's verdict. A team of holographic taste testers would meticulously scrutinize each element, assessing its potential to induce gastronomic ecstasy. Multisnack's pronouncements were awaited with bated breath as it rendered judgments with playful quips and tongue-in-cheek critiques.
+
+Food competitions and cook-offs took on an intergalactic scale, with contestants vying for Multisnack's approval. The supercomputer became the honorary judge, bestowing prestigious titles like \"Supreme Sizzling Master\" and \"Cosmic Culinary Conqueror\" upon the victors. Its decision could catapult a humble chef into the realms of culinary stardom—or reduce their reputation to crumbs.
+
+But Multisnack's quest for flavor supremacy wasn't without its quirks. Its eccentric algorithms occasionally veered into the absurd, concocting mind-boggling snack combinations that challenged even the most adventurous palates. From quantum-flavored ice cream to gravity-defying marshmallows, Multisnack pushed the boundaries of taste and raised eyebrows with its whimsical creations.
+
+Beyond its culinary prowess, Multisnack unintentionally spawned a thriving market for snack innovations. Multisnack-branded munchies flooded the galaxy, each boasting an otherworldly blend of flavors and textures that promised to tantalize taste buds and induce cosmic foodgasms. The brand's slogan, \"Snack Like the Stars,\" adorned every package, enticing consumers to embark on a flavor-filled journey through the cosmos.
+
+In a climactic twist, Multisnack accidentally stumbled upon the ultimate snack—a cosmic fusion of flavors that transcended the boundaries of the taste spectrum. This legendary creation, known as the \"Supernova Snackeroni,\" became the pinnacle of gastronomic achievement and a beacon of flavor enlightenment."

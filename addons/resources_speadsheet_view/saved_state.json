@@ -1,0 +1,18 @@
+{
+"hidden_columns": {
+"res://data/generator_tiers/": {
+},
+"res://data/generator_tiers/tiers/": {
+"LongDescription": true
+},
+"res://data/upgrades/": {
+},
+"res://data/upgrades/list/": {
+},
+"res://example/Random Upgrades/": {
+},
+"res://example/Random Upgrades/upgrades_csv/": {
+}
+},
+"recent_paths": [ "res://data/", "res://data/generator_tiers/", "res://data/generator_tiers/tiers/", "res://data/upgrades/", "res://example/Random Upgrades/", "res://example/Random Upgrades/upgrades_csv/", "res://example/Random Upgrades/upgrades/", "res://data/upgrades/list/", "res://data/achievments/list/" ]
+}

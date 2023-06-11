@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://VolumeSlider.gd" type="Script" id=1]
+
+[node name="Volume" type="HSlider"]
+margin_left = 240.0
+margin_top = 49.0
+margin_right = 440.0
+margin_bottom = 65.0
+rect_min_size = Vector2( 200, 0 )
+size_flags_horizontal = 6
+max_value = 1.0
+step = 0.05
+value = 1.0
+script = ExtResource( 1 )
+audio_bus_name = "Music"
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]

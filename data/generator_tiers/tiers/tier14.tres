@@ -1,0 +1,32 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/ChatGPT.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "ChatGPT"
+Icon = ExtResource( 2 )
+BigPrice = [ 15.0, 14.0 ]
+BigProduces = [ 6.0, 9.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = true
+Owned = 0
+Locked = false
+Description = "GPT-3 (2020): This is one of the largest and most powerful natural language processing models to date, capable of generating human-like text and performing a wide range of language tasks."
+LongDescription = "GPT-3 (Generative Pre-trained Transformer 3) is an advanced language model developed by OpenAI. It is the third iteration in the GPT series and represents a significant advancement in natural language processing and generation.
+
+GPT-3 is based on a deep learning architecture known as a transformer. It consists of a vast neural network with 175 billion parameters, making it one of the largest language models ever created. These parameters enable the model to capture and understand complex patterns, semantics, and contextual information in text data.
+
+The model is pre-trained on a massive corpus of text data from the internet, allowing it to learn and encode knowledge about various domains and linguistic structures. GPT-3's training enables it to generate coherent and contextually relevant text, making it useful for a wide range of natural language processing tasks.
+
+One of the notable features of GPT-3 is its ability to generate human-like text responses. Given a prompt or a partial sentence, the model can generate detailed and contextually appropriate text to complete the prompt. This capability has significant implications for applications such as chatbots, content generation, and language translation.
+
+GPT-3 can also perform tasks beyond text completion. It can answer questions, provide explanations, summarize documents, and even write code snippets. Through a technique called few-shot learning, GPT-3 can adapt to specific tasks and domains with minimal training examples.
+
+However, it's important to note that GPT-3 has some limitations. Despite its impressive capabilities, it can sometimes produce incorrect or nonsensical responses. It also lacks a deep understanding of the content it generates, which means it may not always provide accurate or reliable information.
+
+The release of GPT-3 has sparked significant interest and debate around the potential of large-scale language models. Its applications range from assisting with creative writing and content creation to aiding in research and customer support.
+
+GPT-3 represents a milestone in the development of language models and has driven advancements in natural language processing. Researchers and developers are actively exploring ways to fine-tune and specialize GPT-3 for specific domains and tasks, as well as addressing the ethical considerations surrounding AI-generated text and potential biases in its outputs."

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/overClock/OverClockItem.gd" type="Script" id=1]
+[ext_resource path="res://images/1x/upRight.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Offline Rate"
+Icon = ExtResource( 2 )
+Description = "Increase the compute rate of your computers when offline by 1%"
+v = {
+"AppliedPoints": 0,
+"Hidden": false,
+"Price": 1,
+"Unit": "%",
+"ValueToAdd": 0.01,
+"VarToSet": "offlineRateMultiplier"
+}
+SciFiComp = ""

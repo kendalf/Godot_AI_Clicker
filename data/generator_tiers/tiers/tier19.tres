@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/generator_tiers/generator_tier.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/theVectorix.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "The Vectorix"
+Icon = ExtResource( 2 )
+BigPrice = [ 20.0, 19.0 ]
+BigProduces = [ 2.0, 13.0 ]
+GenSpeed = 1.0
+PriceMultiplier = 1.09
+hidden = false
+Owned = 0
+Locked = false
+Description = ""
+LongDescription = "In the satirical world of \"The Vectorix,\" where numbers and comedy entangle, we find ourselves immersed in a topsy-turvy realm of mathematical mischief. Enter our hapless hero, Geo the mathematician, a peculiar individual with an uncanny ability to spot numerical absurdities in everyday life.
+
+Geo is an average mathematician, content with his ordinary existence, until one day he receives a mysterious email from an enigmatic entity known as The Variable. The email, written entirely in cryptic equations and riddled with mathematical puns, leads Geo down a rabbit hole of numerical tomfoolery.
+
+Guided by the enigmatic Mathemagician, a wizened old sage with a penchant for mathematical slapstick, Geo discovers that the world he thought he knew is nothing more than a hilarious numerical construct known as The Vectorix. It turns out that The Vector is a simulated reality created by a mischievous programmer called The Prankster, whose goal is to expose the absurdities of mathematical logic through comical chaos.
+
+As Geo navigates The Vectorix, he encounters a zany cast of characters. There's Morphemus, the master of mathematical transformations, who perplexes Geo with convoluted shape-shifting puzzles. Triginity, a sassy trigonometry expert, uses her triangular wit to confound Geo at every turn. And let's not forget Agent Sine, a relentless agent of numerical order, forever oscillating between seriousness and silliness.
+
+Equipped with his trusty Math-goggles, a pair of glasses that reveal hidden mathematical patterns and punchlines, Geo embarks on a quest to expose The Prankster's hilarious agenda. Along the way, he discovers that the true purpose of The Vector is not to control humanity, but to unravel the serious facade of mathematics and reveal its playful side.
+
+With each equation solved and numerical riddle cracked, Geo gains new powers. He can summon absurd probability, transforming everyday situations into laugh-out-loud moments. His calculations defy logic, leading to situations where gravity behaves erratically, geometric shapes turn into comedic props, and equations dance to their own whimsical rhythm.
+
+As Geo confronts The Prankster in a final showdown, the very fabric of The Vectorix unravels in a riotous cacophony of numerical gags and mind-bending puns. The Prankster's serious façade crumbles, replaced by laughter and a newfound appreciation for the whimsical nature of mathematics."

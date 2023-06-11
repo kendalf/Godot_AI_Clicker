@@ -1,0 +1,28 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://GameState.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+runNumber = 1
+runStartTime = 0
+numClicks = 0
+totalComputations = [ 0, 0 ]
+currency = [ 0, 0 ]
+perClick = [ 1, 0 ]
+perSec = [ 0, 0 ]
+holdClicksPerSec = 1000
+random_click_event_wait_range = [ 60, 120 ]
+random_click_event_scale_multiplier = 2.5
+random_click_event_clicked = 0
+numComputers = 0
+achievmentsGot = 0
+upgradesBought = 0
+maxClickMultiplier = 1
+timeSaved = 0
+eventLog = [  ]
+settings = {
+"Music": 1,
+"Particles": 1,
+"SFX": 1
+}
