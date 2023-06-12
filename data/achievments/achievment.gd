@@ -19,16 +19,7 @@ func checkTrigger():
 	if Recived:
 		NewNotif = true
 		Hidden = false
-		complete()
 	return Recived
-
-func clickPercentCPS_func(_args):
-	Globals.gameState.CPS_click_percent += 0.01
-	var perc = (Globals.gameState.CPS_click_percent + 0.01) * 100
-	var replacement = " " + str(perc) + "%"
-	var regex = RegEx.new()
-	regex.compile(" [0-9]+%")
-	Description = regex.sub(Description, replacement)
 
 func extract_digits_from_name():
 	var goal = Name.substr(0, Name.length() - 3).to_int()
@@ -41,6 +32,8 @@ func checkProgress():
 	return call(Name + "_progress")
 
 func complete():
+	if !NewNotif: return #checks to see if they got the achievement
+	NewNotif = false
 	Globals.gameState.overClockPoints += OCPoints
 	if Name.match("Own*Tier*"):
 		return OwnNumTier_complete()
@@ -82,12 +75,21 @@ func getComps():
 	return Globals.generator_tiers.Tiers
 
 
+func clickPercentCPS_func(_args):
+	Globals.gameState.CPS_click_percent += 0.01
+	var perc = (Globals.gameState.CPS_click_percent + 0.01) * 100
+	var replacement = " " + str(perc) + "%"
+	var regex = RegEx.new()
+	regex.compile(" [0-9]+%")
+	Description = regex.sub(Description, replacement)
+
+
 func recudce_maxClickUpgradePriceMultiplier_price():
 	gameState().maxClickUpgradePriceMultiplier *= 0.75
-	for i in Globals.upgrades.list:
-		if i.Name == "MaxClickMultiplierUp":
-#			i.set_BigPrice(i.get_BigPrice().multiply(gameState().maxClickUpgradePriceMultiplier))
-			break
+#	for i in Globals.upgrades.list:
+#		if i.Name == "MaxClickMultiplierUp":
+##			i.set_BigPrice(i.get_BigPrice().multiply(gameState().maxClickUpgradePriceMultiplier))
+#			break
 
 func clickNum128_progress():
 	return get_progress_dict(allState().numClicks, Big.new(128))
@@ -276,56 +278,3 @@ func OwnNumTier_complete():
 	#set the produciton rate of any new computers bought
 	var newProduces = getComps()[index].get_BigProduces().multiply(2)
 	getComps()[index].set_BigProduces(newProduces)
-
-##Logic Theorist
-#func Own32Tier00_progress():
-#	return get_progress_dict(getComps()[0].Owned, 32)
-#func Own32Tier00_complete():
-#	OwnNumTier_complete(getComps()[0].Name, 0)
-#
-#func Own64Tier00_progress():
-#	return get_progress_dict(getComps()[0].Owned, 64)
-#func Own64Tier00_complete():
-#	OwnNumTier_complete(getComps()[0].Name, 0)
-#
-#func Own128Tier00_progress():
-#	return get_progress_dict(getComps()[0].Owned, 128)
-#func Own128Tier00_complete():
-#	OwnNumTier_complete(getComps()[0].Name, 0)
-#
-#func Own256Tier00_progress():
-#	return get_progress_dict(getComps()[0].Owned, 256)
-#func Own256Tier00_complete():
-#	OwnNumTier_complete(getComps()[0].Name, 0)
-#
-#func Own512Tier00_progress():
-#	return get_progress_dict(getComps()[0].Owned, 512)
-#func Own512Tier00_complete():
-#	OwnNumTier_complete(getComps()[0].Name, 0)
-#
-##General Problem Solver
-#func Own32Tier01_progress():
-#	return get_progress_dict(getComps()[1].Owned, 32)
-#func Own32Tier01_complete():
-#	OwnNumTier_complete(getComps()[1].Name, 1)
-#
-#func Own64Tier01_progress():
-#	return get_progress_dict(getComps()[1].Owned, 64)
-#func Own64Tier01_complete():
-#	OwnNumTier_complete(getComps()[1].Name, 1)
-#
-#func Own128Tier01_progress():
-#	return get_progress_dict(getComps()[1].Owned, 128)
-#func Own128Tier01_complete():
-#	OwnNumTier_complete(getComps()[1].Name, 1)
-#
-#func Own256Tier01_progress():
-#	return get_progress_dict(getComps()[1].Owned, 256)
-#func Own256Tier01_complete():
-#	OwnNumTier_complete(getComps()[1].Name, 1)
-#
-#func Own512Tier01_progress():
-#	return get_progress_dict(getComps()[1].Owned, 512)
-#func Own512Tier01_complete():
-#	OwnNumTier_complete(getComps()[1].Name, 1)
-#

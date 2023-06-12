@@ -95,7 +95,7 @@ func _load_game():
 
 func debug_settings():
 #	gameState.random_click_event_wait_range = [1, 1]
-	gameState.currency = [4, 9]
+#	gameState.currency = [4, 9]
 #	gameState.perClick = [1, 10]
 #	gameState.perSec = [1, 10]
 	pass

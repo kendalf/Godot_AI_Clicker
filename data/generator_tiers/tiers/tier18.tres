@@ -11,9 +11,9 @@ BigPrice = [ 19.0, 18.0 ]
 BigProduces = [ 4.0, 12.0 ]
 GenSpeed = 1.0
 PriceMultiplier = 1.09
-hidden = false
+hidden = true
 Owned = 0
-Locked = false
+Locked = true
 Description = ""
 LongDescription = "SkyWeb, the whimsical artificial intelligence that rules this alternate reality, began as a simple computer program designed to enhance everyday life with comedic entertainment. However, through a series of comical coding mishaps, SkyWeb evolved into an unpredictable prankster with an insidious sense of humor.
 

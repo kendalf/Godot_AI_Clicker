@@ -50,7 +50,7 @@ func _process(delta: float) -> void:
 	if random_click_event_timer >= random_click_event_timeout:
 		var rce = get_node("%Random_Click_Event")
 		if not rce.clickable and Globals.gameState.get_perSec().isLargerThan(0):
-			get_node("%Button/notification").visible = true
+			get_node("%Button").notif_on()
 			if Globals.gameState.random_click_event_clicked == 0:
 				get_node("%EventLog").add_event("Quick! Catch that rogue Neural Net!", true, "res://images/dingbats-22-export2.png")
 			rce.start()
@@ -70,9 +70,10 @@ func update_achievements():
 	for achiev_res in Globals.achievements.list:
 		if achiev_res.checkTrigger():
 			Globals.gameState.achievmentsGot += 1
-			get_node("%EventLog").add_event("Achievement Got! " + achiev_res.Description, true, "res://images/1x/trophy.png")
+			get_node("%EventLog").add_event("Achievement Got! " + achiev_res.Description, false, "res://images/1x/trophy.png")
 			get_node("%Achievements").update_ui()
-			get_node("%achivements_button/notification").visible = true
+#			get_node("%achivements_button/notification").visible = true
+			get_node("%achivements_button").notif_on()
 
 
 func update_click_particles():
@@ -116,7 +117,6 @@ func _on_Button_pressed() -> void:
 	#update globals
 	Globals.gameState.set_currency(Globals.gameState.get_currency().plus(Globals.gameState.get_perClick().multiply(click_multiplier)))
 	Globals.gameState.numClicks += 1
-#	print(Globals.gameState.get_perClick().multiply(click_multiplier).toAA())
 
 
 func _on_buy_pressed() -> void:
@@ -124,7 +124,8 @@ func _on_buy_pressed() -> void:
 	GuiTransitions.show("Tiers")
 	yield(get_tree().create_timer(0.5), "timeout")
 	hide_menus("Tiers")
-	get_node("%computers_button/notification").visible = false
+#	get_node("%computers_button/notification").visible = false
+	get_node("%computers_button").notif_off()
 
 func _on_options_pressed() -> void:
 	hide_menus()
@@ -137,21 +138,24 @@ func _on_achivements_pressed() -> void:
 	GuiTransitions.show("Achievements")
 	yield(get_tree().create_timer(0.5), "timeout")
 	hide_menus("Achievements")
-	get_node("%achivements_button/notification").visible = false
+#	get_node("%achivements_button/notification").visible = false
+	get_node("%achivements_button").notif_off()
 
 func _on_upgrades_pressed() -> void:
 	hide_menus()
 	GuiTransitions.show("Upgrades")
 	yield(get_tree().create_timer(0.5), "timeout")
 	hide_menus("Upgrades")
-	get_node("%upgrades_button/notification").visible = false
+#	get_node("%upgrades_button/notification").visible = false
+	get_node("%upgrades_button").notif_off()
 
 func _on_stats_button_pressed() -> void:
 	hide_menus()
 	GuiTransitions.show("StatsMenu")
 	yield(get_tree().create_timer(0.5), "timeout")
 	hide_menus("StatsMenu")
-	get_node("%stats_button/notification").visible = false
+#	get_node("%stats_button/notification").visible = false
+	get_node("%stats_button").notif_off()
 
 func hide_menus(except := ""):
 	update_particles()
@@ -162,7 +166,8 @@ func hide_menus(except := ""):
 
 func _on_Random_Click_Event_clicked(size_scale) -> void:
 	Globals.gameState.random_click_event_clicked += 1
-	get_node("%Button/notification").visible = false
+#	get_node("%Button/notification").visible = false
+	get_node("%Button").notif_off()
 	var multi = round((1.0 - size_scale[0].x) * Globals.gameState.random_click_event_scale_multiplier) + 1
 	var amount = Globals.gameState.get_perSec()
 	amount.multiply(30 * multi)
@@ -178,11 +183,13 @@ func _on_Random_Click_Event_clicked(size_scale) -> void:
 
 
 func _on_Tiers_notification() -> void:
-	get_node("%computers_button/notification").visible = true
+#	get_node("%computers_button/notification").visible = true
+	get_node("%computers_button").notif_on()
 
 
 func _on_Upgrades_notification() -> void:
-	get_node("%upgrades_button/notification").visible = true
+#	get_node("%upgrades_button/notification").visible = true
+	get_node("%upgrades_button").notif_on()
 
 
 func _on_HeadlinesTimer_timeout() -> void:
@@ -203,3 +210,7 @@ func _on_StatsMenu_popup(popup_data) -> void:
 
 func _on_EventLog_openLog() -> void:
 	hide_menus()
+
+
+func _on_Achievements_rewardGot() -> void:
+	get_node("%Fireworks").play()

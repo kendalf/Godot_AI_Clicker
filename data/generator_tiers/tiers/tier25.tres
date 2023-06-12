@@ -11,9 +11,9 @@ BigPrice = [ 26.0, 25.0 ]
 BigProduces = [ 3.0, 17.0 ]
 GenSpeed = 1.0
 PriceMultiplier = 1.09
-hidden = false
+hidden = true
 Owned = 0
-Locked = false
+Locked = true
 Description = ""
 LongDescription = "In a galaxy not so far away, amidst the tumultuous Warstar conflict, emerged a protocol droid like no other – D-4PO. Built by a quirk-filled and eccentric engineer named Zargon Funbuckle, D-4PO was intended to be the epitome of diplomacy, sophistication, and, well, questionable fashion choices.
 

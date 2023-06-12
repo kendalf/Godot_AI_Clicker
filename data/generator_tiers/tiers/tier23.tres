@@ -11,9 +11,9 @@ BigPrice = [ 24.0, 23.0 ]
 BigProduces = [ 1.25, 16.0 ]
 GenSpeed = 1.0
 PriceMultiplier = 1.09
-hidden = false
+hidden = true
 Owned = 0
-Locked = false
+Locked = true
 Description = ""
 LongDescription = "In the sprawling metropolis of Comicopolis, a city brimming with superheroes, supervillains, and caped crusaders of all kinds, there existed a renowned superhero hangout called 'The Caped Cantina.' Behind the bar of this legendary establishment stood Barvis, the AI bartender with a superpowered sense of humor.
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
 [ext_resource path="res://addons/kenney_interface_sounds/select_002.wav" type="AudioStream" id=2]
 [ext_resource path="res://Button.gd" type="Script" id=3]
+[ext_resource path="res://images/1x/star.png" type="Texture" id=4]
 
 [node name="Button" type="Button"]
 margin_top = 1208.0
@@ -21,6 +22,13 @@ bus = "SFX"
 [node name="HoldDelay" type="Timer" parent="."]
 wait_time = 0.2
 one_shot = true
+
+[node name="Notifcation" type="Sprite" parent="."]
+unique_name_in_owner = true
+visible = false
+self_modulate = Color( 1, 0.666667, 0, 1 )
+texture = ExtResource( 4 )
+offset = Vector2( 15, 15 )
 
 [connection signal="button_down" from="." to="." method="_on_Button_button_down"]
 [connection signal="button_up" from="." to="." method="_on_Button_button_up"]

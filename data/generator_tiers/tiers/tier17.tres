@@ -11,9 +11,9 @@ BigPrice = [ 18.0, 17.0 ]
 BigProduces = [ 7.5, 11.0 ]
 GenSpeed = 1.0
 PriceMultiplier = 1.09
-hidden = false
+hidden = true
 Owned = 0
-Locked = false
+Locked = true
 Description = ""
 LongDescription = "In the universe of the \"Tea Drinker's Guide to the Galaxy,\" where tea and absurdity are the driving forces of existence, we encounter the formidable intellectual entity known as Steep Thought.
 

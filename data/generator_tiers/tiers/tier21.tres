@@ -11,9 +11,9 @@ BigPrice = [ 22.0, 21.0 ]
 BigProduces = [ 5.0, 14.0 ]
 GenSpeed = 1.0
 PriceMultiplier = 1.09
-hidden = false
+hidden = true
 Owned = 0
-Locked = false
+Locked = true
 Description = ""
 LongDescription = "In a world obsessed with gastronomic delights and intergalactic munchies, Multisnack emerged as the ultimate culinary oracle.
 

@@ -11,9 +11,9 @@ BigPrice = [ 25.0, 24.0 ]
 BigProduces = [ 6.0, 16.0 ]
 GenSpeed = 1.0
 PriceMultiplier = 1.09
-hidden = false
+hidden = true
 Owned = 0
-Locked = false
+Locked = true
 Description = ""
 LongDescription = "In a realm far beyond the edge of imagination, where geometry meets absurdity, Vex emerged as the peculiar progeny of chaotic algorithms and esoteric magic. 
 

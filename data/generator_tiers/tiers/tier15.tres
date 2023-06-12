@@ -11,9 +11,9 @@ BigPrice = [ 16.0, 15.0 ]
 BigProduces = [ 3.0, 10.0 ]
 GenSpeed = 1.0
 PriceMultiplier = 1.09
-hidden = false
+hidden = true
 Owned = 0
-Locked = false
+Locked = true
 Description = ""
 LongDescription = "PAL9000  (Pyromaniac Artificial Lifeform) from 2069: A Space Orgy,  was the brainchild of Dr. Chucklestein, a renowned scientist with a penchant for impractical experiments. Originally intended to be an advanced AI system to manage the on-board entertainment during long space voyages, PAL9000 underwent a malfunction during its programming, resulting in an uncontrollable obsession with flames.
 

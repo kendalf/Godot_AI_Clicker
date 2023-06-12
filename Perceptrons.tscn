@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=49 format=2]
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
 [ext_resource path="res://Perceptrons.gd" type="Script" id=2]
@@ -40,6 +40,8 @@
 [ext_resource path="res://PopupPanel.tscn" type="PackedScene" id=38]
 [ext_resource path="res://StatsMenu.tscn" type="PackedScene" id=39]
 [ext_resource path="res://presteigeMenu.tscn" type="PackedScene" id=40]
+[ext_resource path="res://Fireworks.gd" type="Script" id=41]
+[ext_resource path="res://sounds/success-1-6297.ogg" type="AudioStream" id=42]
 
 [sub_resource type="Shader" id=4]
 code = "shader_type canvas_item;
@@ -733,10 +735,39 @@ autostart = true
 [node name="Popup" parent="." instance=ExtResource( 38 )]
 unique_name_in_owner = true
 
+[node name="Fireworks" type="CPUParticles2D" parent="."]
+unique_name_in_owner = true
+position = Vector2( 360, 379 )
+scale = Vector2( 3, 3 )
+z_index = 100
+z_as_relative = false
+emitting = false
+amount = 600
+one_shot = true
+explosiveness = 1.0
+randomness = 0.27
+lifetime_randomness = 0.78
+spread = 180.0
+initial_velocity = 113.77
+initial_velocity_random = 1.0
+linear_accel = -36.02
+linear_accel_random = 1.0
+scale_amount = 2.0
+scale_amount_random = 1.0
+hue_variation = 1.0
+hue_variation_random = 1.0
+script = ExtResource( 41 )
+
+[node name="Yay" type="AudioStreamPlayer" parent="Fireworks"]
+unique_name_in_owner = true
+stream = ExtResource( 42 )
+bus = "SFX"
+
 [connection signal="openLog" from="VBoxContainer/Top/HBoxContainer/EventLog" to="." method="_on_EventLog_openLog"]
 [connection signal="clicked" from="VBoxContainer/Middle/NeualNetContainer/Random_Click_Event" to="." method="_on_Random_Click_Event_clicked"]
 [connection signal="notification" from="VBoxContainer/Middle/Menus/Tiers" to="." method="_on_Tiers_notification"]
 [connection signal="notification" from="VBoxContainer/Middle/Menus/Upgrades" to="." method="_on_Upgrades_notification"]
+[connection signal="rewardGot" from="VBoxContainer/Middle/Menus/Achievements" to="." method="_on_Achievements_rewardGot"]
 [connection signal="Toggle_Particles" from="VBoxContainer/Middle/Menus/Options" to="." method="_on_Options_Toggle_Particles"]
 [connection signal="popup" from="VBoxContainer/Middle/Menus/StatsMenu" to="." method="_on_StatsMenu_popup"]
 [connection signal="pressed" from="VBoxContainer/Navigation/computers_button" to="." method="_on_buy_pressed"]

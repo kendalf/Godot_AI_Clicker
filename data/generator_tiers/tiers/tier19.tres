@@ -11,9 +11,9 @@ BigPrice = [ 20.0, 19.0 ]
 BigProduces = [ 2.0, 13.0 ]
 GenSpeed = 1.0
 PriceMultiplier = 1.09
-hidden = false
+hidden = true
 Owned = 0
-Locked = false
+Locked = true
 Description = ""
 LongDescription = "In the satirical world of \"The Vectorix,\" where numbers and comedy entangle, we find ourselves immersed in a topsy-turvy realm of mathematical mischief. Enter our hapless hero, Geo the mathematician, a peculiar individual with an uncanny ability to spot numerical absurdities in everyday life.
 

@@ -196,9 +196,9 @@ anims/PopIn = SubResource( 5 )
 
 [node name="notification" type="Sprite" parent="."]
 unique_name_in_owner = true
-visible = false
 self_modulate = Color( 1, 0.666667, 0, 1 )
 texture = ExtResource( 9 )
+offset = Vector2( 10, 10 )
 
 [connection signal="focus_entered" from="." to="." method="_on_EventLog_focus_entered"]
 [connection signal="focus_exited" from="." to="." method="_on_EventLog_focus_exited"]

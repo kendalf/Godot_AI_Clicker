@@ -54,21 +54,22 @@ text = "Achievements"
 
 [node name="AchievementDetails" parent="VBoxContainer" instance=ExtResource( 9 )]
 margin_top = 71.0
-margin_bottom = 361.0
+margin_bottom = 387.0
 rect_min_size = Vector2( 0, 290 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
-margin_top = 371.0
+margin_top = 397.0
 margin_right = 640.0
 margin_bottom = 713.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+follow_focus = true
 scroll_horizontal_enabled = false
 scroll_deadzone = 10
 
 [node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer"]
 margin_right = 640.0
-margin_bottom = 342.0
+margin_bottom = 316.0
 mouse_filter = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -82,7 +83,7 @@ unique_name_in_owner = true
 margin_left = 5.0
 margin_top = 5.0
 margin_right = 635.0
-margin_bottom = 337.0
+margin_bottom = 311.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/vseparation = 20
@@ -114,4 +115,5 @@ custom_styles/pressed = ExtResource( 7 )
 custom_styles/normal = ExtResource( 5 )
 text = "Back"
 
+[connection signal="rewardGot" from="VBoxContainer/AchievementDetails" to="." method="_on_AchievementDetails_rewardGot"]
 [connection signal="pressed" from="Panel2/back" to="." method="_on_back_pressed"]

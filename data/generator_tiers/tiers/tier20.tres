@@ -11,9 +11,9 @@ BigPrice = [ 21.0, 20.0 ]
 BigProduces = [ 1.0, 14.0 ]
 GenSpeed = 1.0
 PriceMultiplier = 1.09
-hidden = false
+hidden = true
 Owned = 0
-Locked = false
+Locked = true
 Description = ""
 LongDescription = "In the cosmic parody known as \"Starwreck,\" Beta emerged as a comical AI sidekick designed to assist the bumbling crew of the starship Jokeprise. Created by the eccentric engineer Professor Guffaw, Beta was meant to be the epitome of cutting-edge artificial intelligence, but the results were hilariously disastrous.
 

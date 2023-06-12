@@ -32,3 +32,8 @@ func play_click():
 	if not click.playing:
 		click.pitch_scale = Constants.bluesFeqs[rand_range(0, Constants.bluesFeqs.size())] + 0.5
 		click.play()
+
+func notif_off():
+	get_node("%Notifcation").visible = false
+func notif_on():
+	get_node("%Notifcation").visible = true

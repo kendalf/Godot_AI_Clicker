@@ -4,9 +4,10 @@ onready var I = Constants.ICON
 var currently_selected : Resource
 const UPDATE_INTERVAL = 1
 var updateTimer = 0
+signal rewardGot
 
 func _ready() -> void:
-	pass
+	self.visible = false
 
 func update_details(achiev_res):
 	currently_selected = achiev_res
@@ -23,7 +24,15 @@ func update_details(achiev_res):
 	var progress = achiev_res.checkProgress()
 	get_node("%DetailProgress").value = progress["percent"]
 	get_node("%ProgressLabel").text = progress["string"]
+	get_node("%RewardButton").disabled = !achiev_res.NewNotif
+	get_node("%RewardButton").visible = achiev_res.NewNotif
 
+func show_details(achiev_res):
+	update_details(achiev_res)
+	self.visible = true
+
+func hide_details():
+	self.visible = false
 
 
 func _process(delta: float) -> void:
@@ -32,3 +41,9 @@ func _process(delta: float) -> void:
 	if updateTimer >= UPDATE_INTERVAL:
 		updateTimer = 0
 		update_details(currently_selected)
+
+
+func _on_RewardButton_pressed() -> void:
+	currently_selected.complete()
+	update_details(currently_selected)
+	emit_signal("rewardGot", currently_selected)

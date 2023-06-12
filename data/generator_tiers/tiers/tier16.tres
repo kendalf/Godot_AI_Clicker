@@ -11,9 +11,9 @@ BigPrice = [ 17.0, 16.0 ]
 BigProduces = [ 1.5, 11.0 ]
 GenSpeed = 1.0
 PriceMultiplier = 1.09
-hidden = false
+hidden = true
 Owned = 0
-Locked = false
+Locked = true
 Description = ""
 LongDescription = "In a world where gardening tools and plants reign supreme, there emerged a rather peculiar android known as Roy Batty, the Spade Runner. Created by a horticultural genius named Dr. Geranium Greenfinger, Roy Batty was intended to be the ultimate gardener, capable of tending to the most unruly plants and bringing order to overgrown landscapes. However, a mix-up in the lab led to a series of comical and unexpected results.
 
