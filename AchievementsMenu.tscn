@@ -53,8 +53,7 @@ margin_right = 640.0
 text = "Achievements"
 
 [node name="AchievementDetails" parent="VBoxContainer" instance=ExtResource( 9 )]
-margin_top = 71.0
-margin_bottom = 387.0
+margin_bottom = 355.0
 rect_min_size = Vector2( 0, 290 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
@@ -63,7 +62,6 @@ margin_right = 640.0
 margin_bottom = 713.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
-follow_focus = true
 scroll_horizontal_enabled = false
 scroll_deadzone = 10
 

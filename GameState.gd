@@ -60,9 +60,11 @@ func compute_offline_earnings():
 
 func compute_OC_earnings():
 	var oc = int((get_hours_played_int() / 24.0) - OC_given_per_24h)
-	OC_given_per_24h += oc
-	overClockPoints += oc
-	return oc
+	if oc >= 1:
+		OC_given_per_24h += oc
+		overClockPoints += oc
+		return oc
+	return 0
 
 func get_hours_played_int():
 	var hoursPlayed = Time.get_time_dict_from_unix_time(OS.get_unix_time() - runStartTime)

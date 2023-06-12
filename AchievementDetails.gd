@@ -7,6 +7,7 @@ var updateTimer = 0
 signal rewardGot
 onready var Osize = rect_size
 onready var Opos = rect_position
+onready var Omod = modulate
 
 func _ready() -> void:
 	self.visible = false
@@ -32,13 +33,10 @@ func update_details(achiev_res):
 
 func show_details(achiev_res):
 	update_details(achiev_res)
-	self.visible = true
 	bounce()
 
 func hide_details():
 	self.visible = false
-#	zip()
-
 
 func _process(delta: float) -> void:
 	if currently_selected:
@@ -47,20 +45,13 @@ func _process(delta: float) -> void:
 		updateTimer = 0
 		update_details(currently_selected)
 
-
 func _on_RewardButton_pressed() -> void:
 	currently_selected.complete()
 	update_details(currently_selected)
 	emit_signal("rewardGot", currently_selected)
 
 func bounce():
+	self.visible = true
 	rect_position = Opos
-	rect_size = Osize
 	$Tween.interpolate_property(self, "rect_position", Vector2.ZERO, rect_position, 0.5, Tween.TRANS_BOUNCE, Tween.EASE_OUT)
-	$Tween.start()
-
-func zip():
-	rect_position = Opos
-	rect_size = Osize
-	$Tween.interpolate_property(self, "rect_size", Osize, Vector2(0, 0), 0.5, Tween.TRANS_QUAD, Tween.EASE_IN)
 	$Tween.start()
