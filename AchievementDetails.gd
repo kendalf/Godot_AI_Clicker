@@ -1,13 +1,16 @@
-extends Panel
+extends Container
 
 onready var I = Constants.ICON
 var currently_selected : Resource
 const UPDATE_INTERVAL = 1
 var updateTimer = 0
 signal rewardGot
+onready var Osize = rect_size
+onready var Opos = rect_position
 
 func _ready() -> void:
 	self.visible = false
+	pass
 
 func update_details(achiev_res):
 	currently_selected = achiev_res
@@ -30,9 +33,11 @@ func update_details(achiev_res):
 func show_details(achiev_res):
 	update_details(achiev_res)
 	self.visible = true
+	bounce()
 
 func hide_details():
 	self.visible = false
+#	zip()
 
 
 func _process(delta: float) -> void:
@@ -47,3 +52,15 @@ func _on_RewardButton_pressed() -> void:
 	currently_selected.complete()
 	update_details(currently_selected)
 	emit_signal("rewardGot", currently_selected)
+
+func bounce():
+	rect_position = Opos
+	rect_size = Osize
+	$Tween.interpolate_property(self, "rect_position", Vector2.ZERO, rect_position, 0.5, Tween.TRANS_BOUNCE, Tween.EASE_OUT)
+	$Tween.start()
+
+func zip():
+	rect_position = Opos
+	rect_size = Osize
+	$Tween.interpolate_property(self, "rect_size", Osize, Vector2(0, 0), 0.5, Tween.TRANS_QUAD, Tween.EASE_IN)
+	$Tween.start()
