@@ -45,6 +45,7 @@ func _process(delta: float) -> void:
 
 func _save_game():
 	gameState.timeSaved = OS.get_unix_time()
+	gameState.compute_daily_streak()
 	var data = {}
 	data["generator_tiers"] = generator_tiers.get_save_dict()
 	data["upgrades"] = upgrades.get_save_dict()
@@ -98,6 +99,7 @@ func debug_settings():
 #	gameState.currency = [4, 9]
 #	gameState.perClick = [1, 10]
 #	gameState.perSec = [1, 10]
+	gameState.totalComputations = [1, 20]
 	pass
 
 

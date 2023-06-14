@@ -1,15 +1,16 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://data/achievments/achievment.gd" type="Script" id=1]
-[ext_resource path="res://images/1x/trophy.png" type="Texture" id=2]
+[ext_resource path="res://images/1x/joystickRight.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
-Name = "achievementsGot8"
+Name = "playStreak2"
 Icon = ExtResource( 2 )
 Hidden = false
 Recived = false
 NewNotif = false
 OCPoints = 1
-Description = "Get 8 Achievements"
-PerkDescription = "Offline earnings time limit increase by 15 Min"
+Description = "Play the game on 2 consecutive days"
+PerkDescription = "Offline earnings time limit increase by 15 Min
+Offline earnings are increased by 5%"

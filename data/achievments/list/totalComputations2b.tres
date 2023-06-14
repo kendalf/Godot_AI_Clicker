@@ -1,15 +1,15 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://data/achievments/achievment.gd" type="Script" id=1]
-[ext_resource path="res://images/1x/trophy.png" type="Texture" id=2]
+[ext_resource path="res://images/perceptron-256-blurry.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
-Name = "achievementsGot32"
+Name = "totalComputations2b"
 Icon = ExtResource( 2 )
 Hidden = false
 Recived = false
 NewNotif = false
-OCPoints = 3
-Description = "Get 32 Achievements"
-PerkDescription = "Offline earnings time limit increase by 45 Min"
+OCPoints = 4
+Description = "Make 2b Total Computaions"
+PerkDescription = "Offline earnings are increased by 4%"

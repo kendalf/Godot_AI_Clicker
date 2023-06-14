@@ -40,6 +40,7 @@ export(Dictionary) var scifiComputers = {
 	"D-4PO"         : 1,
 }
 
+export var play_streak = 0
 export var OC_given_per_24h = 0
 export var timeSaved = 0
 export var eventLog = []
@@ -48,6 +49,19 @@ export var settings = {
 	"Music" : 1,
 	"Particles" : 1
 }
+
+#if its a differenct date and its been less than 24 hours since the
+#last time played then you get +1 to the play_streak var
+func compute_daily_streak():
+	var today = Time.get_datetime_dict_from_unix_time(OS.get_unix_time())
+	var dayLastPlayed = Time.get_datetime_dict_from_unix_time(timeSaved)
+	if today["day"] != dayLastPlayed["day"]:
+		var secs = OS.get_unix_time() - timeSaved #get seconds since last played
+		var days = secs / 60 / 60 / 24 #days since last played
+		if days > 1:
+			play_streak = 1
+		else:
+			play_streak+= 1
 
 func compute_offline_earnings():
 	var timeDif = OS.get_unix_time() - timeSaved #seconds since last played
@@ -103,6 +117,7 @@ func get_save_dict():
 		"offlineRateMultiplier" : offlineRateMultiplier,
 		"scifiComputers" : scifiComputers,
 
+		"play_streak" : play_streak,
 		"OC_given_per_24h" : OC_given_per_24h,
 		"timeSaved" : timeSaved,
 		"eventLog" : eventLog,
@@ -136,6 +151,7 @@ func update_from_dict(dict : Dictionary):
 	offlineRateMultiplier = dict["offlineRateMultiplier"]
 	scifiComputers = dict["scifiComputers"]
 
+	play_streak = dict["play_streak"]
 	OC_given_per_24h = dict["OC_given_per_24h"]
 	timeSaved = dict["timeSaved"]
 	eventLog = dict["eventLog"]

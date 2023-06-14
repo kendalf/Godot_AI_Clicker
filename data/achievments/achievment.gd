@@ -213,20 +213,52 @@ func totalComputations8k_progress():
 func totalComputations8k_complete():
 	gameState().offlineRateMultiplier += 0.01
 
-func totalComputations64k_progress():
-	return get_progress_dict(allState().get_totalComputations(), Big.new(64, 3))
-func totalComputations64k_complete():
-	gameState().offlineRateMultiplier += 0.02
-
 func totalComputations512k_progress():
 	return get_progress_dict(allState().get_totalComputations(), Big.new(512, 3))
 func totalComputations512k_complete():
+	gameState().offlineRateMultiplier += 0.02
+
+func totalComputations32m_progress():
+	return get_progress_dict(allState().get_totalComputations(), Big.new(32, 6))
+func totalComputations32m_complete():
 	gameState().offlineRateMultiplier += 0.03
 
-func totalComputations4m_progress():
-	return get_progress_dict(allState().get_totalComputations(), Big.new(4, 6))
-func totalComputations4m_complete():
+func totalComputations2b_progress():
+	return get_progress_dict(allState().get_totalComputations(), Big.new(2, 9))
+func totalComputations2b_complete():
 	gameState().offlineRateMultiplier += 0.04
+
+func totalComputations128b_progress():
+	return get_progress_dict(allState().get_totalComputations(), Big.new(128, 9))
+func totalComputations128b_complete():
+	gameState().offlineRateMultiplier += 0.05
+
+func totalComputations8t_progress():
+	return get_progress_dict(allState().get_totalComputations(), Big.new(8, 12))
+func totalComputations8t_complete():
+	gameState().offlineRateMultiplier += 0.06
+
+func totalComputations512t_progress():
+	return get_progress_dict(allState().get_totalComputations(), Big.new(512, 12))
+func totalComputations512t_complete():
+	gameState().offlineRateMultiplier += 0.07
+
+func totalComputations32aa_progress():
+	return get_progress_dict(allState().get_totalComputations(), Big.new(32, 15))
+func totalComputations32aa_complete():
+	gameState().offlineRateMultiplier += 0.08
+
+func totalComputations2ab_progress():
+	return get_progress_dict(allState().get_totalComputations(), Big.new(2, 18))
+func totalComputations2ab_complete():
+	gameState().offlineRateMultiplier += 0.09
+
+func totalComputations128ab_progress():
+	return get_progress_dict(allState().get_totalComputations(), Big.new(128, 18))
+func totalComputations128ab_complete():
+	gameState().offlineRateMultiplier += 0.10
+
+
 
 
 func achievementsGot8_progress():
@@ -245,6 +277,7 @@ func achievementsGot32_complete():
 	gameState().offlineTimeLimit += 45
 
 
+
 func upgradesBought8_progress():
 	return get_progress_dict(allState().upgradesBought, 8)
 func upgradesBought8_complete():
@@ -259,6 +292,40 @@ func upgradesBought64_progress():
 	return get_progress_dict(allState().upgradesBought, 64)
 func upgradesBought64_complete():
 	gameState().upgradePriceMultiplier -= 0.05
+
+
+
+
+func playStreak2_progress():
+	return get_progress_dict(gameState().play_streak, 2)
+func playStreak2_complete():
+	gameState().offlineRateMultiplier += 0.05
+	gameState().offlineTimeLimit += 15
+
+func playStreak4_progress():
+	return get_progress_dict(gameState().play_streak, 4)
+func playStreak4_complete():
+	gameState().offlineRateMultiplier += 0.05
+	gameState().offlineTimeLimit += 30
+
+func playStreak8_progress():
+	return get_progress_dict(gameState().play_streak, 8)
+func playStreak8_complete():
+	gameState().offlineRateMultiplier += 0.05
+	gameState().offlineTimeLimit += 45
+
+func playStreak16_progress():
+	return get_progress_dict(gameState().play_streak, 16)
+func playStreak16_complete():
+	gameState().offlineRateMultiplier += 0.05
+	gameState().offlineTimeLimit += 60
+
+func playStreak32_progress():
+	return get_progress_dict(gameState().play_streak, 32)
+func playStreak32_complete():
+	gameState().offlineRateMultiplier += 0.05
+	gameState().offlineTimeLimit += 120
+
 
 
 func OwnNumTier_progress():

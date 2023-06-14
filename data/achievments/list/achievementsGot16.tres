@@ -12,4 +12,4 @@ Recived = false
 NewNotif = false
 OCPoints = 2
 Description = "Get 16 Achievements"
-PerkDescription = "Increase offline Time Limit on earnings by 30 Min"
+PerkDescription = "Offline earnings time limit increase by 30 Min"
