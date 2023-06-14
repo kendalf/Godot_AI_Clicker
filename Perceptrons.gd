@@ -72,7 +72,6 @@ func update_achievements():
 			Globals.gameState.achievmentsGot += 1
 			get_node("%EventLog").add_event("Achievement Got! " + achiev_res.Description, false, "res://images/1x/trophy.png")
 			get_node("%Achievements").update_ui()
-#			get_node("%achivements_button/notification").visible = true
 			get_node("%achivements_button").notif_on()
 
 
@@ -124,7 +123,6 @@ func _on_buy_pressed() -> void:
 	GuiTransitions.show("Tiers")
 	yield(get_tree().create_timer(0.5), "timeout")
 	hide_menus("Tiers")
-#	get_node("%computers_button/notification").visible = false
 	get_node("%computers_button").notif_off()
 
 func _on_options_pressed() -> void:
@@ -138,7 +136,6 @@ func _on_achivements_pressed() -> void:
 	GuiTransitions.show("Achievements")
 	yield(get_tree().create_timer(0.5), "timeout")
 	hide_menus("Achievements")
-#	get_node("%achivements_button/notification").visible = false
 	get_node("%achivements_button").notif_off()
 
 func _on_upgrades_pressed() -> void:
@@ -146,7 +143,6 @@ func _on_upgrades_pressed() -> void:
 	GuiTransitions.show("Upgrades")
 	yield(get_tree().create_timer(0.5), "timeout")
 	hide_menus("Upgrades")
-#	get_node("%upgrades_button/notification").visible = false
 	get_node("%upgrades_button").notif_off()
 
 func _on_stats_button_pressed() -> void:
@@ -154,7 +150,6 @@ func _on_stats_button_pressed() -> void:
 	GuiTransitions.show("StatsMenu")
 	yield(get_tree().create_timer(0.5), "timeout")
 	hide_menus("StatsMenu")
-#	get_node("%stats_button/notification").visible = false
 	get_node("%stats_button").notif_off()
 
 func hide_menus(except := ""):
@@ -166,7 +161,6 @@ func hide_menus(except := ""):
 
 func _on_Random_Click_Event_clicked(size_scale) -> void:
 	Globals.gameState.random_click_event_clicked += 1
-#	get_node("%Button/notification").visible = false
 	get_node("%Button").notif_off()
 	var multi = round((1.0 - size_scale[0].x) * Globals.gameState.random_click_event_scale_multiplier) + 1
 	var amount = Globals.gameState.get_perSec()
@@ -183,12 +177,10 @@ func _on_Random_Click_Event_clicked(size_scale) -> void:
 
 
 func _on_Tiers_notification() -> void:
-#	get_node("%computers_button/notification").visible = true
 	get_node("%computers_button").notif_on()
 
 
 func _on_Upgrades_notification() -> void:
-#	get_node("%upgrades_button/notification").visible = true
 	get_node("%upgrades_button").notif_on()
 
 
@@ -214,3 +206,4 @@ func _on_EventLog_openLog() -> void:
 
 func _on_Achievements_rewardGot() -> void:
 	get_node("%Fireworks").play()
+
