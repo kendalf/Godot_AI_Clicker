@@ -12,6 +12,8 @@ func _ready() -> void:
 			achiev_node.get_node("%Goal").text = achiev_res.checkProgress()["bigGoal"].toAA()
 			get_node("%GridContainer").add_child(achiev_node)
 			achiev_nodes[achiev_res.Name] = achiev_node
+			if achiev_res.NewNotif:
+				achiev_node.get_node("%Notification").visible = true
 			if not achiev_res.Recived:
 				achiev_node.modulate.a = 0.25
 			achiev_node.connect("button_down", get_node("%AchievementDetails"), "show_details", [achiev_res])
@@ -20,10 +22,11 @@ func _ready() -> void:
 
 func update_ui():
 	for achiev_res in Globals.achievements.list:
+		var achiev_node = achiev_nodes[achiev_res.Name]
+		print(achiev_res.NewNotif)
+		if achiev_res.NewNotif:
+			achiev_node.get_node("%Notification").visible = true
 		if not achiev_res.Hidden or achiev_res.Recived:
-			var achiev_node = achiev_nodes[achiev_res.Name]
-			if achiev_res.NewNotif:
-				achiev_node.get_node("%Notification").visible = true
 			if not achiev_res.Recived:
 				achiev_node.modulate.a = 0.25
 			else:

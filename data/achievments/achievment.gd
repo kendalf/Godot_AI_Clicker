@@ -32,7 +32,7 @@ func checkProgress():
 	return call(Name + "_progress")
 
 func complete():
-	if !NewNotif: return #checks to see if they got the achievement
+	if !NewNotif: return #make sure they havent already got the reward
 	NewNotif = false
 	Globals.gameState.overClockPoints += OCPoints
 	if Name.match("Own*Tier*"):
@@ -60,11 +60,13 @@ func get_progress_dict(num, goal):
 func update_from_dict(dict : Dictionary):
 	Hidden = dict["Hidden"]
 	Recived = dict["Recived"]
+	NewNotif = dict["NewNotif"]
 
 func get_save_dict():
 	return {
 		"Hidden" : Hidden,
-		"Recived" : Recived
+		"Recived" : Recived,
+		"NewNotif" : NewNotif,
 		}
 
 func allState():

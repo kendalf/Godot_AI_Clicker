@@ -1,7 +1,6 @@
 extends CPUParticles2D
 
 func play():
-	if emitting:
-		emitting = false
+	restart()
 	emitting = true
 	$Yay.play()
