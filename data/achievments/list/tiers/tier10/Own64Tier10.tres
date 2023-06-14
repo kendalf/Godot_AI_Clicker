@@ -1,16 +1,16 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
-[ext_resource path="res://images/computers/DeepBlue.png" type="Texture" id=1]
+[ext_resource path="res://images/computers/Cog.png" type="Texture" id=1]
 [ext_resource path="res://data/achievments/achievment.gd" type="Script" id=2]
 
 [resource]
 script = ExtResource( 2 )
-Name = "Own64Tier05"
+Name = "Own64Tier10"
 Icon = ExtResource( 1 )
 Hidden = false
 Recived = false
 NewNotif = false
 OCPoints = 2
-Description = "Own 64 Deep Blues"
-PerkDescription = "Double the productivity of Deep Blue
+Description = "Own 64 Cogs"
+PerkDescription = "Double the productivity of Cog
 All computers speed increases by 2%"

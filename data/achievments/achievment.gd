@@ -335,7 +335,17 @@ func OwnNumTier_progress():
 
 func OwnNumTier_complete():
 	var index = extract_digits_from_name()["index"]
+	var goal = extract_digits_from_name()["goal"]
 	var compName = getComps()[index].Name
+	#all computers rate increase
+	var amount = 0.0
+	match goal:
+		32:  amount = 0.01
+		64:  amount = 0.02
+		128: amount = 0.04
+		256: amount = 0.08
+		512: amount = 0.10
+	gameState().computerSpeedMultiplier += amount
 	#add an entry to the global dict
 	if !gameState().computerProductionDoubles.has(compName):
 		gameState().computerProductionDoubles[compName] = 0

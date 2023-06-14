@@ -5,11 +5,12 @@
 
 [resource]
 script = ExtResource( 2 )
-Name = "Own256Tier04"
+Name = "Own256Tier05"
 Icon = ExtResource( 1 )
 Hidden = false
 Recived = false
 NewNotif = false
 OCPoints = 4
 Description = "Own 256 Deep Blues"
-PerkDescription = "Double the productivity of Deep Blue"
+PerkDescription = "Double the productivity of Deep Blue
+All computers speed increases by 8%"

@@ -99,7 +99,7 @@ func debug_settings():
 #	gameState.currency = [4, 9]
 #	gameState.perClick = [1, 10]
 #	gameState.perSec = [1, 10]
-	gameState.totalComputations = [1, 20]
+#	gameState.totalComputations = [1, 20]
 	pass
 
 

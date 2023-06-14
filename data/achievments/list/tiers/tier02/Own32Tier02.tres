@@ -12,4 +12,5 @@ Recived = false
 NewNotif = false
 OCPoints = 1
 Description = "Own 32 ELIZAs"
-PerkDescription = "Double the productivity of ELIZA"
+PerkDescription = "Double the productivity of ELIZA
+All computers speed increases by 1%"

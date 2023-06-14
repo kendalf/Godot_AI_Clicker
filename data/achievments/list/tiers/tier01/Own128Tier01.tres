@@ -12,4 +12,5 @@ Recived = false
 NewNotif = false
 OCPoints = 3
 Description = "Own 128 General Problem Solver"
-PerkDescription = "Double the productivity of General Problem Solver"
+PerkDescription = "Double the productivity of General Problem Solver
+All computers speed increases by 4%"

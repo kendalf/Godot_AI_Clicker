@@ -12,4 +12,5 @@ Recived = false
 NewNotif = false
 OCPoints = 2
 Description = "Own 64 Shakeys"
-PerkDescription = "Double the productivity of Shakey"
+PerkDescription = "Double the productivity of Shakey
+All computers speed increases by 2%"
