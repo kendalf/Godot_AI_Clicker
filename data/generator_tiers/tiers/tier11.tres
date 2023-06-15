@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "Siri (2011): This was an AI-powered virtual assistant developed by Apple that could answer questions, perform tasks, and interact with users in natural language."
+Description = ""
 LongDescription = "Siri is an AI-powered virtual assistant developed by Apple Inc. It was first introduced as a standalone app in 2010 for iOS devices and later integrated into Apple's operating systems, including iOS, macOS, watchOS, and HomePod.
 
 Siri uses a combination of natural language processing, machine learning, and voice recognition technologies to understand and respond to user commands and queries. Its primary function is to provide users with a conversational interface to interact with their devices and access various services and information.

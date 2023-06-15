@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "Cyc (1984): This was an early expert system that aimed to capture common-sense knowledge and reasoning abilities to solve problems."
+Description = ""
 LongDescription = "Cyc is an AI project that aims to develop a comprehensive, common-sense knowledge base and reasoning system. The project began in the mid-1980s at Microelectronics and Computer Technology Corporation (MCC), led by Douglas Lenat. The goal of Cyc is to build a machine-readable representation of general human knowledge and enable AI systems to reason and understand the world in a more human-like manner.
 
 The Cyc knowledge base contains a vast amount of information organized in a logical and structured manner. It includes common-sense facts, rules, and heuristics that capture everyday knowledge about objects, events, and relationships in the world. The knowledge base is continually updated and expanded through a combination of automated processes and human curation.

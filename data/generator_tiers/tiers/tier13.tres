@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "MuZero (2020): This is an AI system developed by DeepMind that can learn how to play complex board games, such as Go and Chess, without any prior knowledge of the game rules or strategies."
+Description = ""
 LongDescription = "MuZero is an AI algorithm developed by DeepMind, the same team behind AlphaGo and AlphaZero. It is a general-purpose algorithm capable of mastering multiple domains without prior knowledge or domain-specific rules. MuZero combines techniques from reinforcement learning, tree search, and Monte Carlo methods to achieve its impressive capabilities.
 
 The key innovation of MuZero lies in its ability to learn and plan in an environment with unknown rules. Unlike previous AI systems that required explicit knowledge of the rules of the game or domain, MuZero learns by interacting with the environment and gathering information through self-play. It is a model-based algorithm that learns a predictive model of the environment and uses this model for planning and decision-making.

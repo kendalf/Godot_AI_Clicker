@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "GPT-3 (2020): This is one of the largest and most powerful natural language processing models to date, capable of generating human-like text and performing a wide range of language tasks."
+Description = ""
 LongDescription = "GPT-3 (Generative Pre-trained Transformer 3) is an advanced language model developed by OpenAI. It is the third iteration in the GPT series and represents a significant advancement in natural language processing and generation.
 
 GPT-3 is based on a deep learning architecture known as a transformer. It consists of a vast neural network with 175 billion parameters, making it one of the largest language models ever created. These parameters enable the model to capture and understand complex patterns, semantics, and contextual information in text data.

@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "ALVINN (1989): This was an early self-driving car developed by Carnegie Mellon University that used neural networks to learn how to steer."
+Description = ""
 LongDescription = "ALVINN (Autonomous Land Vehicle In a Neural Network) was a pioneering self-driving car project developed by Dean Pomerleau at Carnegie Mellon University in 1989. It aimed to demonstrate the feasibility of using neural networks for visual perception and autonomous navigation in real-world environments.
 
 ALVINN utilized a neural network, specifically a type of feedforward network called a multilayer perceptron, to analyze visual input from a forward-facing camera mounted on the vehicle. The neural network was trained to classify different road features, such as lane markings and road edges, based on the pixel-level information provided by the camera.

@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "Cog (1997): This was a humanoid robot developed at MIT that was designed to learn about the world through experience."
+Description = ""
 LongDescription = "Cog, also known as \"Cog Project,\" was a humanoid robot developed by a team led by Rodney Brooks at the Massachusetts Institute of Technology (MIT) in 1997. It aimed to explore the interaction between physical embodiment and cognitive development in robots.
 
 The primary focus of the Cog Project was to develop a robot that could learn and interact with the world through sensory perception and motor control. Cog was designed to have a humanoid form with a head, torso, arms, and hands, enabling it to physically interact with objects and its environment.

@@ -19,7 +19,7 @@ func applyPerk():
 	if Globals.gameState.overClockPoints >= v["Price"] \
 					and v["AppliedPoints"] < v["Max"]:
 		Globals.gameState.overClockPoints -= v["Price"]
-		if SciFiComp:
+		if SciFiComp != "":
 			Globals.gameState.scifiComputers[SciFiComp] = 0
 			update_scifiComp_res()
 		else:
@@ -30,7 +30,7 @@ func applyPerk():
 func unapplyPerk():
 	if v["AppliedPoints"] >= v["Price"]:
 		Globals.gameState.overClockPoints += v["Price"]
-		if SciFiComp:
+		if SciFiComp != "":
 			Globals.gameState.scifiComputers[SciFiComp] = 1
 			update_scifiComp_res()
 		else:
@@ -42,4 +42,6 @@ func update_scifiComp_res():
 	for t in Globals.generator_tiers.Tiers:
 		if t.Name == SciFiComp:
 			t.Locked = Globals.gameState.scifiComputers[SciFiComp]
+			print(t.Name)
+			print(t.Locked)
 			break

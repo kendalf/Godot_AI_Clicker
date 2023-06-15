@@ -44,7 +44,8 @@ func get_save_dict():
 		"BigProduces" : BigProduces,
 		"PriceMultiplier" : PriceMultiplier,
 		"hidden" : hidden,
-		"Owned" : Owned
+		"Owned" : Owned,
+		"Locked" : Locked
 		}
 
 func update_from_dict(dict : Dictionary):
@@ -53,3 +54,4 @@ func update_from_dict(dict : Dictionary):
 	PriceMultiplier = dict["PriceMultiplier"]
 	hidden = dict["hidden"]
 	Owned = dict["Owned"]
+	Locked = dict["Locked"]

@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "MYCIN (1976): This was an early expert system that could diagnose bacterial infections and recommend treatments."
+Description = ""
 LongDescription = "
 MYCIN was an expert system developed in the 1970s at Stanford University by Edward Shortliffe. It was designed to assist doctors in diagnosing and recommending treatments for bacterial infections, particularly in the field of infectious diseases.
 

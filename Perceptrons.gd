@@ -93,7 +93,7 @@ func update_particles():
 			var node = get_node_or_null("%Tier" + str(i) + "_Particles")
 			if node:
 				node.visible = true
-				node.amount = t.Owned
+				node.amount = min(t.Owned, 10)
 		i += 1
 
 

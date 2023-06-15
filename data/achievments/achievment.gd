@@ -355,9 +355,9 @@ func OwnNumTier_complete():
 	if !gameState().computerProductionDoubles.has(compName):
 		gameState().computerProductionDoubles[compName] = 0
 	gameState().computerProductionDoubles[compName] += 1
-	#double the production of the computers that already exist
-#	gameState().addTo_perSec(getComps()[index].get_BigProduces().multiply(getComps()[index].Owned))
-	#set the produciton rate of any new computers bought
+	#double the produciton rate
 	var newProduces = getComps()[index].get_BigProduces().multiply(2)
 	getComps()[index].set_BigProduces(newProduces)
 	gameState().recalc_perSec()
+
+

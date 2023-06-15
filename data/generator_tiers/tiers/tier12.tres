@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "Sophia (2016): This was a humanoid robot developed by Hanson Robotics that could mimic human expressions and engage in conversation."
+Description = ""
 LongDescription = "Sophia is an AI-powered humanoid robot developed by Hanson Robotics, a Hong Kong-based company founded by David Hanson. Sophia gained international attention for its human-like appearance and ability to engage in conversations with people.
 
 Sophia was unveiled in 2016 and has since become a prominent figure in the field of robotics and AI. It has been designed to simulate human facial expressions, gestures, and speech, aiming to create a sense of interaction and social engagement.

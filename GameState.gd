@@ -111,6 +111,7 @@ func get_save_dict():
 
 		"overClockPoints" : overClockPoints,
 		"computerPriceMultiplier" : computerPriceMultiplier,
+		"computerProductionDoubles" : computerProductionDoubles,
 		"upgradePriceMultiplier" : upgradePriceMultiplier,
 		"computerSpeedMultiplier" : computerSpeedMultiplier,
 		"offlineTimeLimit" : offlineTimeLimit,
@@ -145,6 +146,7 @@ func update_from_dict(dict : Dictionary):
 
 	overClockPoints = dict["overClockPoints"]
 	computerPriceMultiplier = dict["computerPriceMultiplier"]
+	computerProductionDoubles = dict["computerProductionDoubles"]
 	upgradePriceMultiplier = dict["upgradePriceMultiplier"]
 	computerSpeedMultiplier = dict["computerSpeedMultiplier"]
 	offlineTimeLimit = dict["offlineTimeLimit"]

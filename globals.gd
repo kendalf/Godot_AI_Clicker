@@ -97,11 +97,11 @@ func _load_game():
 
 func debug_settings():
 #	gameState.random_click_event_wait_range = [1, 1]
-	gameState.currency = [4, 19]
+	gameState.currency = [4, 22]
 #	gameState.perClick = [1, 20]
 #	gameState.perSec = [1, 20]
 #	gameState.totalComputations = [1, 20]
-#	gameState.overClockPoints = 100
+	gameState.overClockPoints = 100
 	pass
 
 
@@ -149,6 +149,9 @@ func reset_run() -> void:
 				t.Locked = gameState.scifiComputers[c]
 	#save and reload scene
 	_save_game()
+	if OS.is_debug_build():
+		print("starting debug mode")
+		debug_settings()
 	var _result = get_tree().reload_current_scene()
 
 

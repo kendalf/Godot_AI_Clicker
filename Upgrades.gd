@@ -29,16 +29,13 @@ func update_ui():
 		var upgrade_node = tier_node_list[upgrade_res.Name]
 		upgrade_node.get_node("%description").text = upgrade_res.Description
 		var price = upgrade_res.get_BigPrice()
-		if upgrade_res.hidden:
-			if Globals.gameState.get_currency().multiply(10).isLessThan(price):
-				upgrade_node.visible = false
-			elif upgrade_node.visible == false:
-				upgrade_node.visible = true
+		var canAfford = !Globals.gameState.get_currency().multiply(10).isLessThan(price)
+
+		if canAfford and upgrade_res.hidden:
+			if upgrade_res.Owned == 0 or upgrade_res.recurring:
 				emit_signal("notification")
 				upgrade_res.hidden = false
-		if upgrade_res.Owned >=1 and upgrade_res.recurring == false:
-			upgrade_node.visible = false
-			upgrade_res.hidden = false
+		upgrade_node.visible = !upgrade_res.hidden
 
 		var buyButton = upgrade_node.get_node("%buyButton")
 		if Globals.gameState.get_currency().isLargerThanOrEqualTo(price):

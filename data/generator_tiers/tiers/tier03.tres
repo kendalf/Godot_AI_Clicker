@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "MYCIN (1976): This was an early expert system that could diagnose bacterial infections and recommend treatments."
+Description = ""
 LongDescription = "Shakey the Robot, developed at the Stanford Research Institute (SRI) in the late 1960s, was one of the first mobile robots capable of autonomous navigation and performing tasks in real-world environments. It was a groundbreaking project that contributed significantly to the field of robotics and AI.
 
 Shakey was a wheeled robot equipped with a TV camera, sensors, and a computer system. It operated in a block world, a simplified environment consisting of objects arranged in a grid-like structure. Shakey's primary objective was to navigate through the environment, perceive its surroundings, and manipulate objects to complete tasks.

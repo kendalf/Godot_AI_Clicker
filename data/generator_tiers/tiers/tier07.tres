@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "AlphaGo (2016): This was an AI system developed by Google's DeepMind that defeated the world champion in the game of Go."
+Description = ""
 LongDescription = "AlphaGo is an AI program developed by DeepMind, a subsidiary of Alphabet Inc. (Google's parent company). It gained global attention in 2016 when it defeated the world champion Go player, Lee Sedol, in a five-game match.
 
 Go is an ancient board game known for its complexity, strategic depth, and vast number of possible moves. Unlike chess, where brute force computation is effective, Go poses a significant challenge for AI due to the immense branching factor and the difficulty of evaluating positions.

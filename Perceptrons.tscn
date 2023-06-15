@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://theme.tres" type="Theme" id=1]
 [ext_resource path="res://Perceptrons.gd" type="Script" id=2]
@@ -19,7 +19,6 @@
 [ext_resource path="res://AchievementsMenu.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Upgrades.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Random_Click_Event.tscn" type="PackedScene" id=19]
-[ext_resource path="res://images/1x/star.png" type="Texture" id=20]
 [ext_resource path="res://InfoCard.tscn" type="PackedScene" id=21]
 [ext_resource path="res://EventLog.tscn" type="PackedScene" id=22]
 [ext_resource path="res://images/1x/signal3.png" type="Texture" id=23]
@@ -573,11 +572,6 @@ text = ""
 icon = ExtResource( 10 )
 expand_icon = true
 
-[node name="notification" type="Sprite" parent="VBoxContainer/Navigation/computers_button"]
-visible = false
-self_modulate = Color( 1, 0.666667, 0, 1 )
-texture = ExtResource( 20 )
-
 [node name="upgrades_button" parent="VBoxContainer/Navigation" instance=ExtResource( 4 )]
 unique_name_in_owner = true
 margin_left = 193.0
@@ -589,11 +583,6 @@ size_flags_horizontal = 8
 text = ""
 icon = ExtResource( 14 )
 expand_icon = true
-
-[node name="notification" type="Sprite" parent="VBoxContainer/Navigation/upgrades_button"]
-visible = false
-self_modulate = Color( 1, 0.666667, 0, 1 )
-texture = ExtResource( 20 )
 
 [node name="achivements_button" parent="VBoxContainer/Navigation" instance=ExtResource( 4 )]
 unique_name_in_owner = true
@@ -607,11 +596,6 @@ text = ""
 icon = ExtResource( 12 )
 expand_icon = true
 
-[node name="notification" type="Sprite" parent="VBoxContainer/Navigation/achivements_button"]
-visible = false
-self_modulate = Color( 1, 0.666667, 0, 1 )
-texture = ExtResource( 20 )
-
 [node name="stats_button" parent="VBoxContainer/Navigation" instance=ExtResource( 4 )]
 unique_name_in_owner = true
 margin_left = 397.0
@@ -623,11 +607,6 @@ size_flags_horizontal = 8
 text = ""
 icon = ExtResource( 23 )
 expand_icon = true
-
-[node name="notification" type="Sprite" parent="VBoxContainer/Navigation/stats_button"]
-visible = false
-self_modulate = Color( 1, 0.666667, 0, 1 )
-texture = ExtResource( 20 )
 
 [node name="options" parent="VBoxContainer/Navigation" instance=ExtResource( 4 )]
 margin_left = 499.0
@@ -708,11 +687,6 @@ margin_right = 680.0
 margin_bottom = 120.0
 mouse_filter = 2
 size_flags_horizontal = 3
-
-[node name="notification" type="Sprite" parent="VBoxContainer/Button"]
-visible = false
-self_modulate = Color( 1, 0.666667, 0, 1 )
-texture = ExtResource( 20 )
 
 [node name="bgMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 5 )

@@ -14,7 +14,7 @@ PriceMultiplier = 1.09
 hidden = true
 Owned = 0
 Locked = false
-Description = "MYCIN (1976): This was an early expert system that could diagnose bacterial infections and recommend treatments."
+Description = ""
 LongDescription = "ELIZA, developed by Joseph Weizenbaum at MIT in the mid-1960s, was one of the earliest and most famous examples of a natural language processing program. It was designed to simulate a conversation between a human and a computer, with a particular focus on psychotherapy dialogue.
 
 ELIZA was built on a set of pattern-matching rules that transformed user inputs into specific responses. It used simple techniques such as keyword matching and rephrasing to generate its replies. By analyzing user inputs and applying pattern-matching rules, ELIZA could mimic the conversational style of a Rogerian psychotherapist.
