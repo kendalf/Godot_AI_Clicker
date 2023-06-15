@@ -23,7 +23,6 @@ func _ready() -> void:
 func update_ui():
 	for achiev_res in Globals.achievements.list:
 		var achiev_node = achiev_nodes[achiev_res.Name]
-		print(achiev_res.NewNotif)
 		if achiev_res.NewNotif:
 			achiev_node.get_node("%Notification").visible = true
 		if not achiev_res.Hidden or achiev_res.Recived:

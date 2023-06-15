@@ -11,6 +11,7 @@ Description = "Decrease the price of Upgrades by 1%"
 v = {
 "AppliedPoints": 0,
 "Hidden": false,
+"Max": 80,
 "Price": 1,
 "Unit": "%",
 "ValueToAdd": -0.01,

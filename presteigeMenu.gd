@@ -26,7 +26,7 @@ func get_panel_ready(res, _comp := false):
 
 func update_panel(res, _comp := false):
 	var panelNode = nodeList[res.Name]
-	panelNode.get_node("%ItemName").text = res.Name
+	panelNode.get_node("%ItemName").text = " " + res.Name + " "
 	panelNode.get_node("%Price").text = "x" + str(res.v["Price"])
 	panelNode.get_node("%Icon").texture = res.Icon
 	panelNode.get_node("%Description").text = res.Description
@@ -37,7 +37,9 @@ func update_panel(res, _comp := false):
 		panelNode.get_node("%CurrentAmount").text = "Currently " + str(current) + res.v["Unit"]
 	var upButton = panelNode.get_node("%Up")
 	var downButton = panelNode.get_node("%Down")
-	upButton.disabled = Globals.gameState.overClockPoints < res.v["Price"]
+
+	upButton.disabled = Globals.gameState.overClockPoints < res.v["Price"] \
+						or res.v["AppliedPoints"] >= res.v["Max"]
 	downButton.disabled = res.v["AppliedPoints"] < res.v["Price"]
 
 func _process(delta: float) -> void:

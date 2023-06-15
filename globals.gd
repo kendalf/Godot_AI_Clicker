@@ -29,6 +29,7 @@ func _ready() -> void:
 	if OS.is_debug_build():
 		print("starting debug mode")
 		debug_settings()
+
 	#set the volume levels
 	var sfx_bus := AudioServer.get_bus_index("SFX")
 	var music_bus := AudioServer.get_bus_index("Music")
@@ -95,11 +96,12 @@ func _load_game():
 
 
 func debug_settings():
-	gameState.random_click_event_wait_range = [1, 1]
-	gameState.currency = [4, 9]
-	gameState.perClick = [1, 10]
-	gameState.perSec = [1, 10]
-	gameState.totalComputations = [1, 20]
+#	gameState.random_click_event_wait_range = [1, 1]
+#	gameState.currency = [4, 19]
+#	gameState.perClick = [1, 20]
+#	gameState.perSec = [1, 20]
+#	gameState.totalComputations = [1, 20]
+	gameState.overClockPoints = 100
 	pass
 
 

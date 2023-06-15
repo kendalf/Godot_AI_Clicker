@@ -32,16 +32,16 @@ func update_ui():
 	for tier_res in Globals.generator_tiers.Tiers:
 		var tier_node = tier_node_list[tier_res.Name]
 		var price = tier_res.get_BigPrice()
-		if tier_res.hidden:
-			if Globals.gameState.get_currency().multiply(10).isLessThan(price):
-				tier_node.visible = false
-			elif tier_node.visible == false:
-				if !tier_res.Locked:
-					tier_node.visible = true
-					emit_signal("notification")
-					tier_res.hidden = false
+		var canAfford = !Globals.gameState.get_currency().multiply(10).isLessThan(price)
+
+		if canAfford and tier_res.hidden and !tier_res.Locked:
+			emit_signal("notification")
+			tier_res.hidden = false
+		if tier_res.hidden or tier_res.Locked:
+			tier_node.visible = false
 		else:
 			tier_node.visible = true
+
 		var produces = tier_res.get_BigProduces()
 		var total = Big.new(produces)
 		total.multiply(tier_res.Owned)

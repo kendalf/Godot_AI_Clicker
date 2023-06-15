@@ -11,6 +11,7 @@ Description = "Unlock a new advanced sci-fi computer. Costs 15aa Produces 3b"
 v = {
 "AppliedPoints": 0,
 "Hidden": true,
+"Max": 10,
 "Price": 10,
 "ValueToAdd": 1.0,
 "VarToSet": "scifiComputers"

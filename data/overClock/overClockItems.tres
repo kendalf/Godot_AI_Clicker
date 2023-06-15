@@ -2,10 +2,10 @@
 
 [ext_resource path="res://data/overClock/OverClock_Res_Array.gd" type="Script" id=1]
 [ext_resource path="res://data/overClock/list/cheaperComputers.tres" type="Resource" id=2]
-[ext_resource path="res://data/overClock/list/offlineRate.tres" type="Resource" id=3]
+[ext_resource path="res://data/overClock/list/offlineTime.tres" type="Resource" id=3]
 [ext_resource path="res://data/overClock/list/DeepThought.tres" type="Resource" id=4]
 [ext_resource path="res://data/overClock/list/cheaperUpgrades.tres" type="Resource" id=5]
-[ext_resource path="res://data/overClock/list/offlineTime.tres" type="Resource" id=6]
+[ext_resource path="res://data/overClock/list/offlineRate.tres" type="Resource" id=6]
 [ext_resource path="res://data/overClock/list/fasterComputers.tres" type="Resource" id=7]
 
 [resource]

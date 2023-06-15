@@ -10,12 +10,14 @@ export(Dictionary) var v = {
 	"AppliedPoints" : 0,
 	"VarToSet" : "",
 	"ValueToAdd" : 1.0,
-	"Unit" : "%"
+	"Unit" : "%",
+	"Max" : 0
 }
 export(String) var SciFiComp
 
 func applyPerk():
-	if Globals.gameState.overClockPoints >= v["Price"]:
+	if Globals.gameState.overClockPoints >= v["Price"] \
+					and v["AppliedPoints"] < v["Max"]:
 		Globals.gameState.overClockPoints -= v["Price"]
 		if SciFiComp:
 			Globals.gameState.scifiComputers[SciFiComp] = 0
