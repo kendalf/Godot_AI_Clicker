@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://images/computers/ChatGPT.png" type="Texture" id=1]
+[ext_resource path="res://data/achievments/achievment.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+Name = "Own128Tier14"
+Icon = ExtResource( 1 )
+Hidden = false
+Recived = false
+NewNotif = false
+OCPoints = 3
+Description = "Own 128 ChatGPTs"
+PerkDescription = "Double the productivity of ChatGPT
+All computers speed increases by 4%"
