@@ -194,3 +194,10 @@ func set_perSec(big_num : Big):
 
 func addTo_perSec(num):
 	set_perSec(get_perSec().plus(num))
+
+func recalc_perSec():
+	var newValue = Big.new(0)
+	for t in Globals.generator_tiers.Tiers:
+		newValue.plus(t.get_BigProduces().multiply(t.Owned))
+	print(newValue.toAA())
+	perSec = [newValue.mantissa, newValue.exponent]

@@ -88,10 +88,8 @@ func clickPercentCPS_func(_args):
 
 func recudce_maxClickUpgradePriceMultiplier_price():
 	gameState().maxClickUpgradePriceMultiplier *= 0.75
-#	for i in Globals.upgrades.list:
-#		if i.Name == "MaxClickMultiplierUp":
-##			i.set_BigPrice(i.get_BigPrice().multiply(gameState().maxClickUpgradePriceMultiplier))
-#			break
+
+
 
 func clickNum128_progress():
 	return get_progress_dict(allState().numClicks, Big.new(128))
@@ -186,26 +184,31 @@ func CPS128_progress():
 	return get_progress_dict(allState().get_perSec(), Big.new(128))
 func CPS128_complete():
 	gameState().computerSpeedMultiplier += 0.01
+	gameState().recalc_perSec()
 
 func CPS1k_progress():
 	return get_progress_dict(allState().get_perSec(), Big.new(1, 3))
 func CPS1k_complete():
 	gameState().computerSpeedMultiplier += 0.02
+	gameState().recalc_perSec()
 
 func CPS8k_progress():
 	return get_progress_dict(allState().get_perSec(), Big.new(8, 3))
 func CPS8k_complete():
 	gameState().computerSpeedMultiplier += 0.03
+	gameState().recalc_perSec()
 
 func CPS64k_progress():
 	return get_progress_dict(allState().get_perSec(), Big.new(64, 3))
 func CPS64k_complete():
 	gameState().computerSpeedMultiplier += 0.04
+	gameState().recalc_perSec()
 
 func CPS512k_progress():
 	return get_progress_dict(allState().get_perSec(), Big.new(512, 3))
 func CPS512k_complete():
 	gameState().computerSpeedMultiplier += 0.05
+	gameState().recalc_perSec()
 
 
 
@@ -353,7 +356,8 @@ func OwnNumTier_complete():
 		gameState().computerProductionDoubles[compName] = 0
 	gameState().computerProductionDoubles[compName] += 1
 	#double the production of the computers that already exist
-	gameState().addTo_perSec(getComps()[index].get_BigProduces().multiply(getComps()[index].Owned))
+#	gameState().addTo_perSec(getComps()[index].get_BigProduces().multiply(getComps()[index].Owned))
 	#set the produciton rate of any new computers bought
 	var newProduces = getComps()[index].get_BigProduces().multiply(2)
 	getComps()[index].set_BigProduces(newProduces)
+	gameState().recalc_perSec()

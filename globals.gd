@@ -97,11 +97,11 @@ func _load_game():
 
 func debug_settings():
 #	gameState.random_click_event_wait_range = [1, 1]
-#	gameState.currency = [4, 19]
+	gameState.currency = [4, 19]
 #	gameState.perClick = [1, 20]
 #	gameState.perSec = [1, 20]
 #	gameState.totalComputations = [1, 20]
-	gameState.overClockPoints = 100
+#	gameState.overClockPoints = 100
 	pass
 
 
