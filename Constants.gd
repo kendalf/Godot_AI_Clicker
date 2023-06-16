@@ -35,6 +35,8 @@ const ICON = {
 	"clik" : preload("res://images/expansion x1/cursor.png"),
 	"up"   : preload("res://images/1x/arrowUp.png"),
 	"down" : preload("res://images/1x/arrowDown.png"),
+	"up2"  : preload("res://images/1x/up.png"),
+	"dow2" : preload("res://images/1x/down.png"),
 	"chek" : preload("res://images/1x/checkmark.png"),
 	"play" : preload("res://images/1x/forward.png"),
 	"film" : preload("res://images/1x/film.png"),

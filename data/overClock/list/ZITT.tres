@@ -1,19 +1,19 @@
 [gd_resource type="Resource" load_steps=3 format=2]
 
 [ext_resource path="res://data/overClock/OverClockItem.gd" type="Script" id=1]
-[ext_resource path="res://images/computers/pal9000PIX.png" type="Texture" id=2]
+[ext_resource path="res://images/computers/ZITT.png" type="Texture" id=2]
 
 [resource]
 script = ExtResource( 1 )
-Name = "Unlock PAL9000"
+Name = "Unlock ZITT"
 Icon = ExtResource( 2 )
-Description = "Unlock a new advanced sci-fi computer. Costs 15aa Produces 3b"
+Description = "Unlock a new advanced sci-fi computer"
 v = {
 "AppliedPoints": 0,
 "Hidden": true,
-"Max": 10,
-"Price": 10,
+"Max": 45,
+"Price": 45,
 "ValueToAdd": 1.0,
 "VarToSet": "scifiComputers"
 }
-SciFiComp = "PAL9000"
+SciFiComp = "ZITT"

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://data/overClock/OverClockItem.gd" type="Script" id=1]
+[ext_resource path="res://images/computers/theVectorix.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+Name = "Unlock The Vectorix"
+Icon = ExtResource( 2 )
+Description = "Unlock a new advanced sci-fi computer"
+v = {
+"AppliedPoints": 0,
+"Hidden": true,
+"Max": 30,
+"Price": 30,
+"ValueToAdd": 1.0,
+"VarToSet": "scifiComputers"
+}
+SciFiComp = "The Vectorix"

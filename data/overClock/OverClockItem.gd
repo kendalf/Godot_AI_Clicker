@@ -42,6 +42,4 @@ func update_scifiComp_res():
 	for t in Globals.generator_tiers.Tiers:
 		if t.Name == SciFiComp:
 			t.Locked = Globals.gameState.scifiComputers[SciFiComp]
-			print(t.Name)
-			print(t.Locked)
 			break
