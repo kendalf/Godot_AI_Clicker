@@ -1,8 +1,5 @@
-# Godot-Fontpack
-A collection of open fonts ready to use in Godot projects.
+Simple mobile game concept I'm working on. I've always liked clicker games so I decided to make one focused on AI with some historical educational content. Right now its mostly just a generic clicker game but I'm trying to think of ways to make the gameplay more unique. 
 
-Each font folder contains the .tres file for Godot, additional font versions if they available and its license file.
+Hopefully this will get released on Android and IOS and maybe a steam version if I can manage it.
 
-Preview of all fonts in this pack:
-
-![alt text](https://raw.githubusercontent.com/dalton5000/Godot-Fontpack/master/fonts/overview.PNG "Preview Image")
+Suggestions and bug reports are welcome! 
